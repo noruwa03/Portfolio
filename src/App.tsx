@@ -273,7 +273,7 @@ function App() {
                     JavaScript ES6+
                   </h4>
                 </div>
-                <div className="flex flex-row items-center space-x-3">
+                <div className="flex flex-row items-center sm:space-x-3 space-x-2">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="12"
