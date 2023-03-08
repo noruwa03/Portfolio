@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f3f3f3;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #999;
+  border-radius: 1rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+   background: #6366f1;
+}
+.menu-btn {
+
+  width: 50px;
+  height: 45px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+.menu-btn__burger {
+  width: 28px;
+  height: 2px;
+  background: #312e81;
+
+  transition: all 0.5s ease-in-out;
+}
+.menu-btn__burger::before {
+  content: "";
+  position: absolute;
+  width: 35px;
+  height: 2px;
+  background: #312e81;
+
+  transition: all 0.5s ease-in-out;
+}
+
+.menu-btn__burger::after {
+  content: "";
+  position: absolute;
+  width: 35px;
+  height: 2px;
+  background: #312e81;
+
+  transition: all 0.5s ease-in-out;
+}
+.menu-btn__burger::before {
+  transform: translateY(-9px);
+}
+.menu-btn__burger::after {
+  transform: translateY(9px);
+}
+/* ANIMATION */
+.menu-btn.active .menu-btn__burger {
+  transform: translateX(-50px);
+  background: transparent;
+  box-shadow: none;
+}
+.menu-btn.active .menu-btn__burger::before {
+  transform: rotate(45deg) translate(35px, -35px);
+}
+.menu-btn.active .menu-btn__burger::after {
+  transform: rotate(-45deg) translate(35px, 35px);
+}
