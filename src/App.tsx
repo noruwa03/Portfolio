@@ -59,10 +59,10 @@ function App() {
 
   return (
     <>
-      <nav className="lg:px-14 sm:px-8 px-2 grid grid-cols-8 lg:h-[5.5rem] sm:h-[4rem] h-[4rem]  items-center sticky top-0 z-40  border-t border-transparent backdrop-blur-md">
+      <nav className="lg:px-14 sm:px-8 px-6 grid grid-cols-8 lg:h-[5.5rem] sm:h-[4rem] h-[4rem]  items-center sticky top-0 z-40  border-t border-transparent backdrop-blur-md">
         <a
           href="/"
-          className="col-span-2 lg:text-3xl text-2xl font-extrabold text-indigo-800 relative sm:top-0 sm:left-0 "
+          className="col-span-2 lg:text-3xl text-3xl font-extrabold text-indigo-800 relative sm:top-0 sm:left-0 "
         >
           Nor
           <span className="text-red-400">uwa</span>
@@ -75,7 +75,7 @@ function App() {
             <li>
               <h5
                 onClick={goToAbout}
-                className="lg:text-base text-lg lg:font-semibold font-normal text-slate-900 px-2 py-2 cursor-pointer hover:text-indigo-900"
+                className="lg:text-base text-lg font-semibold text-slate-900 px-2 py-2 cursor-pointer hover:text-indigo-900"
               >
                 About
               </h5>
@@ -84,7 +84,7 @@ function App() {
             <li>
               <h5
                 onClick={goToExperience}
-                className="lg:text-base text-lg lg:font-semibold font-normal text-slate-900 px-2 py-2 cursor-pointer hover:text-indigo-900"
+                className="lg:text-base text-lg font-semibold text-slate-900 px-2 py-2 cursor-pointer hover:text-indigo-900"
               >
                 Experience
               </h5>
@@ -92,7 +92,7 @@ function App() {
             <li>
               <h5
                 onClick={goToWork}
-                className="lg:text-base text-lg lg:font-semibold font-normal text-slate-900 px-2 py-2 cursor-pointer hover:text-indigo-900"
+                className="lg:text-base text-lg font-semibold text-slate-900 px-2 py-2 cursor-pointer hover:text-indigo-900"
               >
                 Work
               </h5>
@@ -100,7 +100,7 @@ function App() {
             <li>
               <a
                 onClick={goToContact}
-                className="lg:text-base text-lg lg:font-semibold font-normal text-slate-900 px-2 py-2 cursor-pointer hover:text-indigo-900"
+                className="lg:text-base text-lg font-semibold text-slate-900 px-2 py-2 cursor-pointer hover:text-indigo-900"
               >
                 Contact
               </a>
@@ -108,7 +108,7 @@ function App() {
             <li>
               <a
                 href={Resume}
-                className="lg:text-base text-lg lg:font-semibold font-normal text-indigo-800  border-2 border-indigo-700  px-4 py-2 rounded-md"
+                className="lg:text-base text-lg font-semibold text-indigo-800  border-2 border-indigo-700  lg:px-4 lg:py-2 px-10 py-4 block lg:mt-0 mt-5 rounded-md"
                 download
               >
                 Resume
@@ -118,7 +118,7 @@ function App() {
         </div>
         <div
           onClick={toggleMenu}
-          className="menu-btn fixed top-2 right-1 lg:hidden flex items-center justify-center z-50"
+          className="menu-btn fixed top-2 right-5 lg:hidden flex items-center justify-center z-50"
           ref={menuBtn}
         >
           <div className="menu-btn__burger"></div>
@@ -191,8 +191,8 @@ function App() {
         </ul>
       </div>
 
-      <section id="" className="lg:pt-28 pt-16 pb-16 lg:px-48 sm:px-8 px-2">
-        <h1 className="lg:text-2xl text-lg font-semibold text-slate-600 lg:mb-0 mb-2">
+      <section id="" className="lg:pt-16 pt-16 pb-16 lg:px-48 sm:px-8 px-6">
+        <h1 className="lg:text-2xl text-lg font-semibold text-red-400 lg:mb-0 mb-2">
           Hi, my name is
         </h1>
         <h2 className="lg:text-7xl sm:text-5xl text-4xl text-transparent bg-clip-text bg-gradient-to-r from-blue-900 to-purple-600 font-bold lg:my-4 my-1">
@@ -203,13 +203,13 @@ function App() {
         </h3>
         <p className="lg:w-3/5 w-5/5 mt-8  sm:mb-16  mb-20 lg:text-lg text-base text-slate-700 font-normal">
           I stay updated on all the latest trends and developments associated
-          with frontend web development and I have the knowledge to apply this
+          with frontend web development and i have the knowledge to apply this
           information where appropriate. I have great organizational and time
           utilization skill with a willingness to learn.
         </p>
         <a
           href="mailto:noruwaobaseki@gmail.com"
-          className="px-10 lg:py-4 py-3 lg:text-lg text-base text-indigo-800 font-bold rounded-md border-[3px] border-indigo-700"
+          className="px-10 py-4 lg:text-lg text-base text-indigo-800 font-bold rounded-md border-[3px] border-indigo-700"
         >
           Hire me
         </a>
@@ -218,7 +218,7 @@ function App() {
       <section
         id="about"
         ref={about}
-        className="lg:py-32 py-20 lg:px-48 sm:px-8 px-2"
+        className="lg:py-24 py-20 lg:px-48 sm:px-8 px-6"
       >
         <h1 className="lg:text-3xl text-2xl font-bold text-indigo-800 mb-8">
           About Me
@@ -226,25 +226,24 @@ function App() {
         <div className="grid lg:grid-cols-8 grid-cols-4 gap-x-20 gap-y-8">
           <div className="lg:col-span-5 col-span-4">
             <p className="lg:text-lg text-base text-slate-600 font-normal mb-4">
-              Hi there, My name is Noruwa and I am able to design, code and
+              Hi there, My name is Noruwa and i am able to design, code and
               deploy web apps in an organized and efficient manner. I am an avid
               learner, quick to grasp new technologies to design effective and
-              scalable products
+              scalable products.
             </p>
             <p className="lg:text-lg text-base text-slate-600 font-normal mb-4">
-              I have experience implementing links, tools and similar features
-              into web designs and I can prepare documents and keep accurate
-              daily reports. I use good judgment and i have the ability to
-              manage my time wisely to meet deadlines. I have excellent verbal
-              and written skills that make it easy to understand information and
-              to articulate my ideas clearly, so others can understand.
+              I have experience implementing links, tools and third party APIs
+              into web designs and i can prepare documents and keep accurate
+              daily reports. I have excellent verbal and written skills that
+              make it easy to understand information and to articulate my ideas
+              clearly, so others can understand.
             </p>
             <p className="lg:text-lg text-base text-slate-600 font-normal mb-4">
               Here is a list of languages and tools i use:
             </p>
             <div className="grid grid-cols-4 gap-8">
               <div className="col-span-2 space-y-1">
-                <div className="flex flex-row flex-wrap items-center space-x-3">
+                <div className="flex flex-row items-center sm:space-x-3 space-x-2">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="12"
@@ -255,11 +254,11 @@ function App() {
                   >
                     <path d="M8 12a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm0 1A5 5 0 1 0 8 3a5 5 0 0 0 0 10z" />
                   </svg>
-                  <h4 className="lg:text-base text-base text-slate-600 font-normal">
+                  <h4 className="lg:text-base text-xs text-slate-600 font-normal">
                     HTML, CSS, SCSS
                   </h4>
                 </div>
-                <div className="flex flex-row flex-wrap items-center space-x-3">
+                <div className="flex flex-row items-center sm:space-x-3 space-x-2">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="12"
@@ -270,11 +269,11 @@ function App() {
                   >
                     <path d="M8 12a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm0 1A5 5 0 1 0 8 3a5 5 0 0 0 0 10z" />
                   </svg>
-                  <h4 className="lg:text-base text-base text-slate-600 font-normal">
+                  <h4 className="lg:text-base text-xs text-slate-600 font-normal">
                     JavaScript ES6+
                   </h4>
                 </div>
-                <div className="flex flex-row flex-wrap items-center space-x-3">
+                <div className="flex flex-row items-center space-x-3">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="12"
@@ -285,11 +284,11 @@ function App() {
                   >
                     <path d="M8 12a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm0 1A5 5 0 1 0 8 3a5 5 0 0 0 0 10z" />
                   </svg>
-                  <h4 className="lg:text-base text-base text-slate-600 font-normal">
+                  <h4 className="lg:text-base text-xs text-slate-600 font-normal">
                     Typescript
                   </h4>
                 </div>
-                <div className="flex flex-row flex-wrap items-center space-x-3">
+                <div className="flex flex-row items-center sm:space-x-3 space-x-2">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="12"
@@ -300,14 +299,14 @@ function App() {
                   >
                     <path d="M8 12a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm0 1A5 5 0 1 0 8 3a5 5 0 0 0 0 10z" />
                   </svg>
-                  <h4 className="lg:text-base text-base text-slate-600 font-normal">
+                  <h4 className="lg:text-base text-xs text-slate-600 font-normal">
                     Vue Js & Nuxt Js
                   </h4>
                 </div>
               </div>
 
               <div className="col-span-2 space-y-1">
-                <div className="flex flex-row flex-wrap items-center space-x-3">
+                <div className="flex flex-row items-center sm:space-x-3 space-x-2">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="12"
@@ -318,11 +317,11 @@ function App() {
                   >
                     <path d="M8 12a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm0 1A5 5 0 1 0 8 3a5 5 0 0 0 0 10z" />
                   </svg>
-                  <h4 className="lg:text-base text-base text-slate-600 font-normal">
+                  <h4 className="lg:text-base text-xs text-slate-600 font-normal">
                     React Js & Next Js
                   </h4>
                 </div>
-                <div className="flex flex-row flex-wrap items-center space-x-3">
+                <div className="flex flex-row items-center sm:space-x-3 space-x-2">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="12"
@@ -333,11 +332,11 @@ function App() {
                   >
                     <path d="M8 12a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm0 1A5 5 0 1 0 8 3a5 5 0 0 0 0 10z" />
                   </svg>
-                  <h4 className="lg:text-base text-base text-slate-600 font-normal">
+                  <h4 className="lg:text-base text-xs text-slate-600 font-normal">
                     Figma
                   </h4>
                 </div>
-                <div className="flex flex-row flex-wrap items-center space-x-3">
+                <div className="flex flex-row items-center sm:space-x-3 space-x-2">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="12"
@@ -348,11 +347,11 @@ function App() {
                   >
                     <path d="M8 12a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm0 1A5 5 0 1 0 8 3a5 5 0 0 0 0 10z" />
                   </svg>
-                  <h4 className="lg:text-base text-base text-slate-600 font-normal">
+                  <h4 className="lg:text-base text-xs text-slate-600 font-normal">
                     Node
                   </h4>
                 </div>
-                <div className="flex flex-row flex-wrap items-center space-x-3">
+                <div className="flex flex-row items-center sm:space-x-3 space-x-2">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="12"
@@ -363,7 +362,7 @@ function App() {
                   >
                     <path d="M8 12a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm0 1A5 5 0 1 0 8 3a5 5 0 0 0 0 10z" />
                   </svg>
-                  <h4 className="lg:text-base text-base text-slate-600 font-normal">
+                  <h4 className="lg:text-base text-xs text-slate-600 font-normal">
                     PHP & Laravel
                   </h4>
                 </div>
@@ -383,7 +382,7 @@ function App() {
       <section
         id="experience"
         ref={experience}
-        className="lg:py-32 py-20 lg:px-48 sm:px-8 px-2"
+        className="lg:py-28 py-20 lg:px-48 sm:px-8 px-6"
       >
         <h1 className="lg:text-3xl text-2xl font-bold text-indigo-800 mb-8">
           Where I’ve Worked
@@ -432,7 +431,7 @@ function App() {
       <section
         id="work"
         ref={work}
-        className="lg:py-32 py-20 lg:px-48 sm:px-8 px-2"
+        className="lg:py-24 py-20 lg:px-48 sm:px-8 px-6"
       >
         <h1 className="lg:text-3xl text-2xl font-bold text-indigo-800 mb-8">
           Things I've Built
@@ -469,7 +468,7 @@ function App() {
         </div>
       </section>
 
-      <section className="lg:py-32 py-20 lg:px-48 sm:px-8 px-2">
+      <section className="lg:py-32 py-20 lg:px-48 sm:px-8 px-6">
         <h1 className="lg:text-3xl text-2xl text-center font-bold text-indigo-800 mb-8">
           Other activities
         </h1>
@@ -516,7 +515,7 @@ function App() {
               </div>
             </div>
           </div>
-          <div className="lg:col-span-3 sm:col-span-3 col-span-4 bg-indigo-100 rounded-md shadow shadow-gray-200 p-6">
+          <div className="lg:col-span-3 sm:col-span-3 col-span-4 bg-indigo-100 rounded-md shadow shadow-gray-200 hover:bg-indigo-200 cursor-default p-6">
             <div className=" space-y-4">
               <a
                 href="https://devontrade.netlify.app"
@@ -558,7 +557,7 @@ function App() {
               </div>
             </div>
           </div>
-          <div className="lg:col-span-3 sm:col-span-3 col-span-4 bg-indigo-100 rounded-md shadow shadow-gray-200 p-6">
+          <div className="lg:col-span-3 sm:col-span-3 col-span-4 bg-indigo-100 rounded-md shadow shadow-gray-200 hover:bg-indigo-200 cursor-default p-6">
             <div className=" space-y-4">
               <a
                 href="https://saas-hospital.netlify.app"
@@ -608,7 +607,7 @@ function App() {
       <section
         id="contact"
         ref={contact}
-        className="lg:py-32 py-20 lg:px-48 sm:px-8 px-2"
+        className="lg:py-28 py-20 lg:px-48 sm:px-8 px-6"
       >
         <h2 className="lg:text-5xl text-3xl  text-indigo-800 text-center font-bold">
           Get In Touch
@@ -633,7 +632,7 @@ function App() {
         </div>
       </section>
 
-      <footer className="pt-20 pb-8 lg:px-48 sm:px-8 px-2">
+      <footer className="pt-20 pb-8 lg:px-48 sm:px-8 px-6">
         <div className="lg:hidden grid">
           <ul className="place-content-center flex flex-row space-x-10 my-8">
             <li>
