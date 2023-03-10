@@ -1,3 +1,4 @@
+import Logo from "./assets/icons/logo.svg"
 import Resume from "./assets/resume.pdf";
 import MyImage from "./assets/images/Obaseki_Noruwa.jpg";
 import Haraka from "./assets/images/haraka.png";
@@ -7,11 +8,49 @@ function App() {
   const menuBtn = useRef<HTMLDivElement | null>(null);
   const navItem = useRef<HTMLDivElement | null>(null);
 
+  const sun = useRef<any | null>(null);
+  const moon = useRef<any | null>(null);
+
+  // Toggle sun & moon
+  const iconToggle = () => {
+    sun.current?.classList.toggle("display-none");
+    moon.current?.classList.toggle("display-none");
+  };
+
+  // Get theme from localstorage & user perference
+  const theme = window.localStorage.getItem("theme");
+  const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+  // Theme Check
+  const themeCheck = () => {
+    if (theme === "dark" || (!theme && systemTheme)) {
+      document.documentElement.classList.add("dark");
+      moon.current?.classList.add("display-none");
+      return;
+    }
+    sun.current?.classList.add("display-none");
+    window.localStorage.setItem("icon", "sun");
+  };
+
+  const themeSwitch = () => {
+    if (document.documentElement.classList.contains("dark")) {
+      document.documentElement.classList.remove("dark");
+      window.localStorage.setItem("theme", "light");
+      iconToggle();
+      return;
+    }
+
+    document.documentElement.classList.add("dark");
+    window.localStorage.setItem("theme", "dark");
+    iconToggle();
+  };
+
+  themeCheck();
+
   const about = useRef<HTMLDivElement | null>(null);
   const experience = useRef<HTMLDivElement | null>(null);
   const work = useRef<HTMLDivElement | null>(null);
   const contact = useRef<HTMLDivElement | null>(null);
-
 
   const toggleMenu = () => {
     menuBtn.current?.classList.toggle("active");
@@ -59,23 +98,24 @@ function App() {
 
   return (
     <>
-      <nav className="lg:px-14 sm:px-8 px-6 grid grid-cols-8 lg:h-[5.5rem] sm:h-[4rem] h-[4rem]  items-center sticky top-0 z-40  border-t border-transparent backdrop-blur-md">
+      <nav className="lg:px-14 sm:px-8 px-6 grid grid-cols-8 lg:h-[5.5rem] sm:h-[4rem] h-[4rem] dark:bg-red-300  items-center sticky top-0 z-40  border-t border-transparent backdrop-blur-md">
         <a
           href="/"
-          className="col-span-2 lg:text-3xl text-3xl font-extrabold text-indigo-800 relative sm:top-0 sm:left-0 "
+          className="col-span-2 lg:text-3xl text-3xl font-mono font-extrabold text-indigo-800 relative sm:top-0 sm:left-0 "
         >
-          Nor
-          <span className="text-red-400">uwa</span>
+          {/* Nor
+          <span className="text-red-400">uwa</span> */}
+          <img src={Logo} alt="Logo" className="lg:w-[3rem] w-[3rem]" />
         </a>
         <div
-          className="col-span-6 lg:grid hidden lg:relative lg:top-0 lg:right-0 fixed top-0 right-0 lg:h-12 lg:w-full w-4/5  h-screen lg:items-center lg:bg-transparent bg-white z-30 lg:overflow-hidden overflow-y-auto transition ease-in-out motion-reduce:transition-none motion-reduce:hover:transform-none"
+          className="col-span-6 lg:grid hidden lg:relative lg:top-0 lg:right-0 fixed top-0 right-0 lg:h-12 lg:w-full w-full  h-screen lg:items-center lg:bg-transparent bg-[#000000cc] z-30 lg:overflow-hidden overflow-y-auto transition ease-in-out motion-reduce:transition-none motion-reduce:hover:transform-none"
           ref={navItem}
         >
           <ul className="lg:place-content-end place-content-center lg:mt-0 mt-20 flex lg:flex-row flex-col flex-wrap items-center w-full lg:space-x-12 lg:space-y-0 space-y-8">
             <li>
               <h5
                 onClick={goToAbout}
-                className="lg:text-base text-lg font-semibold text-slate-900 px-2 py-2 cursor-pointer hover:text-indigo-900"
+                className="lg:text-base text-2xl font-mono font-semibold lg:text-slate-900 text-white px-2 py-2 cursor-pointer hover:text-indigo-900"
               >
                 About
               </h5>
@@ -84,7 +124,7 @@ function App() {
             <li>
               <h5
                 onClick={goToExperience}
-                className="lg:text-base text-lg font-semibold text-slate-900 px-2 py-2 cursor-pointer hover:text-indigo-900"
+                className="lg:text-base text-2xl font-mono font-semibold lg:text-slate-900 text-white px-2 py-2 cursor-pointer hover:text-indigo-900"
               >
                 Experience
               </h5>
@@ -92,7 +132,7 @@ function App() {
             <li>
               <h5
                 onClick={goToWork}
-                className="lg:text-base text-lg font-semibold text-slate-900 px-2 py-2 cursor-pointer hover:text-indigo-900"
+                className="lg:text-base text-2xl font-mono font-semibold lg:text-slate-900 text-white px-2 py-2 cursor-pointer hover:text-indigo-900"
               >
                 Work
               </h5>
@@ -100,7 +140,7 @@ function App() {
             <li>
               <a
                 onClick={goToContact}
-                className="lg:text-base text-lg font-semibold text-slate-900 px-2 py-2 cursor-pointer hover:text-indigo-900"
+                className="lg:text-base text-2xl font-mono font-semibold lg:text-slate-900 text-white px-2 py-2 cursor-pointer hover:text-indigo-900"
               >
                 Contact
               </a>
@@ -108,11 +148,38 @@ function App() {
             <li>
               <a
                 href={Resume}
-                className="lg:text-base text-lg font-semibold text-indigo-800  border-2 border-indigo-700  lg:px-4 lg:py-2 px-10 py-4 block lg:mt-0 mt-5 rounded-md"
+                className="lg:text-base text-2xl font-mono font-semibold lg:text-indigo-800 text-white  border-2 lg:border-indigo-700 border-white  lg:px-4 lg:py-2 px-10 py-4 block lg:mt-0 mt-5 rounded-md"
                 download
               >
                 Resume
               </a>
+            </li>
+            <li className="flex flex-row items-center">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="18"
+                height="18"
+                fill="currentColor"
+                className="bi bi-brightness-high-fill fill-yellow-400 display-none"
+                viewBox="0 0 16 16"
+                ref={sun}
+                onClick={themeSwitch}
+              >
+                <path d="M12 8a4 4 0 1 1-8 0 4 4 0 0 1 8 0zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z" />
+              </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="18"
+                height="18"
+                fill="currentColor"
+                className="bi bi-moon-stars-fill fill-gray-600"
+                viewBox="0 0 16 16"
+                ref={moon}
+                onClick={themeSwitch}
+              >
+                <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z" />
+                <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z" />
+              </svg>
             </li>
           </ul>
         </div>
@@ -191,25 +258,24 @@ function App() {
         </ul>
       </div>
 
-      <section id="" className="lg:pt-16 pt-16 pb-16 lg:px-48 sm:px-8 px-6">
-        <h1 className="lg:text-2xl text-lg font-semibold text-red-400 lg:mb-0 mb-2">
+      <section id="" className="lg:pt-16 pt-24 pb-16 lg:px-48 sm:px-8 px-6">
+        <h1 className="lg:text-2xl text-lg font-mono font-semibold text-red-400 lg:mb-8 mb-2">
           Hi, my name is
         </h1>
-        <h2 className="lg:text-7xl sm:text-5xl text-4xl text-transparent bg-clip-text bg-gradient-to-r from-blue-900 to-purple-600 font-bold lg:my-4 my-1">
+        <h2 className="lg:text-7xl sm:text-5xl font-mono text-4xl text-transparent bg-clip-text bg-gradient-to-r from-blue-900 to-purple-600 font-extrabold lg:my-2 my-1">
           Obaseki Noruwa.
         </h2>
-        <h3 className="lg:text-6xl sm:text-5xl text-4xl text-indigo-800 font-bold lg:my-4 my-0">
-          Tech enthusiast from Nigeria.
+        <h3 className="lg:text-6xl sm:text-5xl font-mono text-4xl text-indigo-800 font-extrabold lg:my-0 my-0">
+          Creative tech enthusiast.
         </h3>
-        <p className="lg:w-3/5 w-5/5 mt-8  sm:mb-16  mb-20 lg:text-lg text-base text-slate-700 font-normal">
-          I stay updated on all the latest trends and developments associated
-          with frontend web development and i have the knowledge to apply this
-          information where appropriate. I have great organizational and time
-          utilization skill with a willingness to learn.
+        <p className="lg:w-3/5 w-5/5 mt-8  sm:mb-10  mb-16 font-mono lg:text-lg text-base text-slate-700 font-normal">
+          I'm a creative web developer that design, build scaleable web
+          applications. I help awesome people to build websites. I have great
+          organizational and time utilization skill with a willingness to learn.
         </p>
         <a
           href="mailto:noruwaobaseki@gmail.com"
-          className="px-10 py-4 lg:text-lg text-base text-indigo-800 font-bold rounded-md border-[3px] border-indigo-700"
+          className="font-mono call-to-action"
         >
           Hire me
         </a>
@@ -220,25 +286,25 @@ function App() {
         ref={about}
         className="lg:py-24 py-20 lg:px-48 sm:px-8 px-6"
       >
-        <h1 className="lg:text-3xl text-2xl font-bold text-indigo-800 mb-8">
+        <h1 className="lg:text-3xl text-2xl font-mono font-bold text-indigo-800 mb-8">
           About Me
         </h1>
         <div className="grid lg:grid-cols-8 grid-cols-4 gap-x-20 gap-y-8">
           <div className="lg:col-span-5 col-span-4">
-            <p className="lg:text-lg text-base text-slate-600 font-normal mb-4">
+            <p className="lg:text-lg font-mono text-base text-slate-600 font-normal mb-4">
               Hi there, My name is Noruwa and i am able to design, code and
               deploy web apps in an organized and efficient manner. I am an avid
               learner, quick to grasp new technologies to design effective and
               scalable products.
             </p>
-            <p className="lg:text-lg text-base text-slate-600 font-normal mb-4">
+            <p className="lg:text-lg font-mono text-base text-slate-600 font-normal mb-4">
               I have experience implementing links, tools and third party APIs
               into web designs and i can prepare documents and keep accurate
               daily reports. I have excellent verbal and written skills that
               make it easy to understand information and to articulate my ideas
               clearly, so others can understand.
             </p>
-            <p className="lg:text-lg text-base text-slate-600 font-normal mb-4">
+            <p className="lg:text-lg font-mono text-base text-slate-600 font-normal mb-4">
               Here is a list of languages and tools i use:
             </p>
             <div className="grid grid-cols-4 gap-8">
@@ -254,7 +320,7 @@ function App() {
                   >
                     <path d="M8 12a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm0 1A5 5 0 1 0 8 3a5 5 0 0 0 0 10z" />
                   </svg>
-                  <h4 className="lg:text-base text-xs text-slate-600 font-normal">
+                  <h4 className="lg:text-base text-xs font-mono text-slate-600 font-normal">
                     HTML, CSS, SCSS
                   </h4>
                 </div>
@@ -269,7 +335,7 @@ function App() {
                   >
                     <path d="M8 12a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm0 1A5 5 0 1 0 8 3a5 5 0 0 0 0 10z" />
                   </svg>
-                  <h4 className="lg:text-base text-xs text-slate-600 font-normal">
+                  <h4 className="lg:text-base text-xs font-mono text-slate-600 font-normal">
                     JavaScript ES6+
                   </h4>
                 </div>
@@ -284,7 +350,7 @@ function App() {
                   >
                     <path d="M8 12a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm0 1A5 5 0 1 0 8 3a5 5 0 0 0 0 10z" />
                   </svg>
-                  <h4 className="lg:text-base text-xs text-slate-600 font-normal">
+                  <h4 className="lg:text-base text-xs font-mono text-slate-600 font-normal">
                     Typescript
                   </h4>
                 </div>
@@ -299,7 +365,7 @@ function App() {
                   >
                     <path d="M8 12a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm0 1A5 5 0 1 0 8 3a5 5 0 0 0 0 10z" />
                   </svg>
-                  <h4 className="lg:text-base text-xs text-slate-600 font-normal">
+                  <h4 className="lg:text-base text-xs font-mono text-slate-600 font-normal">
                     Vue Js & Nuxt Js
                   </h4>
                 </div>
@@ -317,7 +383,7 @@ function App() {
                   >
                     <path d="M8 12a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm0 1A5 5 0 1 0 8 3a5 5 0 0 0 0 10z" />
                   </svg>
-                  <h4 className="lg:text-base text-xs text-slate-600 font-normal">
+                  <h4 className="lg:text-base text-xs font-mono text-slate-600 font-normal">
                     React Js & Next Js
                   </h4>
                 </div>
@@ -332,7 +398,7 @@ function App() {
                   >
                     <path d="M8 12a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm0 1A5 5 0 1 0 8 3a5 5 0 0 0 0 10z" />
                   </svg>
-                  <h4 className="lg:text-base text-xs text-slate-600 font-normal">
+                  <h4 className="lg:text-base text-xs font-mono text-slate-600 font-normal">
                     Figma
                   </h4>
                 </div>
@@ -347,7 +413,7 @@ function App() {
                   >
                     <path d="M8 12a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm0 1A5 5 0 1 0 8 3a5 5 0 0 0 0 10z" />
                   </svg>
-                  <h4 className="lg:text-base text-xs text-slate-600 font-normal">
+                  <h4 className="lg:text-base text-xs font-mono text-slate-600 font-normal">
                     Node
                   </h4>
                 </div>
@@ -362,7 +428,7 @@ function App() {
                   >
                     <path d="M8 12a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm0 1A5 5 0 1 0 8 3a5 5 0 0 0 0 10z" />
                   </svg>
-                  <h4 className="lg:text-base text-xs text-slate-600 font-normal">
+                  <h4 className="lg:text-base text-xs font-mono text-slate-600 font-normal">
                     PHP & Laravel
                   </h4>
                 </div>
@@ -384,18 +450,18 @@ function App() {
         ref={experience}
         className="lg:py-28 py-20 lg:px-48 sm:px-8 px-6"
       >
-        <h1 className="lg:text-3xl text-2xl font-bold text-indigo-800 mb-8">
+        <h1 className="lg:text-3xl text-2xl font-mono font-bold text-indigo-800 mb-8">
           Where I’ve Worked
         </h1>
         <div className="grid lg:grid-cols-8 sm:grid-cols-6 grid-col-4 gap-8">
           <div className="lg:col-span-4 sm:col-span-3 col-span-4">
             <a
               href="/"
-              className="lg:text-2xl text-base text-slate-700 font-semibold"
+              className="lg:text-2xl text-base font-mono text-slate-700 font-semibold"
             >
               Ecolabz
             </a>
-            <p className="lg:text-lg text-base text-slate-600 font-normal mt-2 mb-4">
+            <p className="lg:text-lg text-base font-mono text-slate-600 font-normal mt-2 mb-4">
               Frontend Engineer @ Ecolabz
               <span className="block text-base font-semibold text-indigo-700">
                 June 2022 - Present
@@ -404,20 +470,20 @@ function App() {
             <div className="">
               <div className="space-y-2">
                 <div>
-                  <h4 className="lg:text-base text-base text-slate-600 font-normal">
+                  <h4 className="lg:text-base font-mono text-base text-slate-600 font-normal">
                     Collaborated with the ui/ux designer to build the website,
                     Write modern, maintainable code for ecolabz web projects
                     projects.
                   </h4>
                 </div>
                 <div>
-                  <h4 className="lg:text-base text-base text-slate-600 font-normal">
+                  <h4 className="lg:text-base font-mono text-base text-slate-600 font-normal">
                     Integrated third-party mailchimp API to improved product
                     accessibility and communication.
                   </h4>
                 </div>
                 <div>
-                  <h4 className="lg:text-base text-base text-slate-600 font-normal">
+                  <h4 className="lg:text-base font-mono text-base text-slate-600 font-normal">
                     Work with different tools, platforms, frameworks, and
                     backend as a service such as firebase.
                   </h4>
@@ -433,7 +499,7 @@ function App() {
         ref={work}
         className="lg:py-24 py-20 lg:px-48 sm:px-8 px-6"
       >
-        <h1 className="lg:text-3xl text-2xl font-bold text-indigo-800 mb-8">
+        <h1 className="lg:text-3xl text-2xl font-mono font-bold text-indigo-800 mb-8">
           Things I've Built
         </h1>
         <div className="grid sm:grid-cols-8 grid-cols-4 gap-8 space-y-16">
@@ -441,11 +507,11 @@ function App() {
             <img src={Haraka} alt="Haraka" className="mb-4" />
             <a
               href="https://haraka.shop"
-              className="lg:text-2xl text-lg text-slate-800 font-semibold underline decoration-wavy decoration-indigo-800"
+              className="lg:text-2xl text-lg font-mono text-slate-800 font-semibold underline decoration-wavy decoration-indigo-800"
             >
               Haraka shop
             </a>
-            <p className="text-base text-slate-800 mt-6">
+            <p className="text-base font-mono text-slate-800 mt-6">
               Haraka is an online food and grocery order and delivery platform.
               Skip the confusing hours of searching and comparing vendors with
               all stores, reviews and delivery within your reach.
@@ -455,11 +521,11 @@ function App() {
             <img src={Ecolabz} alt="Ecolabz" className="mb-4" />
             <a
               href="https://ecolabz.io"
-              className="lg:text-2xl text-lg text-slate-800 font-semibold underline decoration-wavy decoration-indigo-800"
+              className="lg:text-2xl text-lg font-mono text-slate-800 font-semibold underline decoration-wavy decoration-indigo-800"
             >
               Ecolabz
             </a>
-            <p className="text-base text-slate-800 mt-6">
+            <p className="text-base font-mono text-slate-800 mt-6">
               Ecolabz is a startup venture studio that focuses on ideating,
               creating, designing, developing and launching startups and
               companies.
@@ -469,7 +535,7 @@ function App() {
       </section>
 
       <section className="lg:py-32 py-20 lg:px-48 sm:px-8 px-6">
-        <h1 className="lg:text-3xl text-2xl text-center font-bold text-indigo-800 mb-8">
+        <h1 className="lg:text-3xl text-2xl font-mono text-center font-bold text-indigo-800 mb-8">
           Other activities
         </h1>
         <div className="grid lg:grid-cols-9 sm:grid-cols-6 grid-cols-4 gap-8">
@@ -500,16 +566,24 @@ function App() {
                 </svg>
               </a>
 
-              <h3 className="font-bold text-lg text-slate-600">Arbuzzer</h3>
-              <p className="text-base text-slate-800">
+              <h3 className="font-bold text-lg font-mono text-slate-600">
+                Arbuzzer
+              </h3>
+              <p className="text-base font-mono text-slate-800">
                 A single web page application of a logistics and supply chain
                 service provider.
               </p>
               <div className="flex flex-row flex-wrap space-x-4">
-                <p className="text-base font-semibold text-slate-800">Stack:</p>
-                <p className="text-base font-normal text-slate-800">HTML</p>
-                <p className="text-base font-normal text-slate-800">CSS</p>
-                <p className="text-base font-normal text-slate-800">
+                <p className="text-base font-semibold font-mono text-slate-800">
+                  Stack:
+                </p>
+                <p className="text-base font-normal font-mono text-slate-800">
+                  HTML
+                </p>
+                <p className="text-base font-normal font-mono text-slate-800">
+                  CSS
+                </p>
+                <p className="text-base font-normal font-mono text-slate-800">
                   JavaScript
                 </p>
               </div>
@@ -542,16 +616,24 @@ function App() {
                 </svg>
               </a>
 
-              <h3 className="font-bold text-lg text-slate-600">Devon trade</h3>
-              <p className="text-base text-slate-800">
+              <h3 className="font-bold text-lg font-mono text-slate-600">
+                Devon trade
+              </h3>
+              <p className="text-base font-mono text-slate-800">
                 Devon is a group of financial and cryptocurrency experts that
                 invest in mining and cryptocurrency trading.
               </p>
               <div className="flex flex-row flex-wrap space-x-4">
-                <p className="text-base font-semibold text-slate-800">Stack:</p>
-                <p className="text-base font-normal text-slate-800">HTML</p>
-                <p className="text-base font-normal text-slate-800">CSS</p>
-                <p className="text-base font-normal text-slate-800">
+                <p className="text-base font-semibold font-mono text-slate-800">
+                  Stack:
+                </p>
+                <p className="text-base font-normal font-mono text-slate-800">
+                  HTML
+                </p>
+                <p className="text-base font-normal font-mono text-slate-800">
+                  CSS
+                </p>
+                <p className="text-base font-normal font-mono text-slate-800">
                   JavaScript
                 </p>
               </div>
@@ -584,18 +666,24 @@ function App() {
                 </svg>
               </a>
 
-              <h3 className="font-bold text-lg text-slate-600">
+              <h3 className="font-bold text-lg font-mono text-slate-600">
                 Hospital dashboard
               </h3>
-              <p className="text-base text-slate-800">
+              <p className="text-base font-mono text-slate-800">
                 A multi page web ui for the management of patients, and services
                 in an hospital.
               </p>
               <div className="flex flex-row flex-wrap space-x-4">
-                <p className="text-base font-semibold text-slate-800">Stack:</p>
-                <p className="text-base font-normal text-slate-800">HTML</p>
-                <p className="text-base font-normal text-slate-800">CSS</p>
-                <p className="text-base font-normal text-slate-800">
+                <p className="text-base font-semibold font-mono text-slate-800">
+                  Stack:
+                </p>
+                <p className="text-base font-normal font-mono text-slate-800">
+                  HTML
+                </p>
+                <p className="text-base font-normal font-mono text-slate-800">
+                  CSS
+                </p>
+                <p className="text-base font-normal font-mono text-slate-800">
                   JavaScript
                 </p>
               </div>
@@ -609,11 +697,11 @@ function App() {
         ref={contact}
         className="lg:py-28 py-20 lg:px-48 sm:px-8 px-6"
       >
-        <h2 className="lg:text-5xl text-3xl  text-indigo-800 text-center font-bold">
+        <h2 className="lg:text-5xl text-3xl font-mono text-indigo-800 text-center font-bold">
           Get In Touch
         </h2>
         <div className="lg:w-3/5 w-5/5 mx-auto my-8">
-          <p className="lg:text-lg text-base text-center text-slate-800 mb-14">
+          <p className="lg:text-lg text-base font-mono text-center text-slate-800 mb-14">
             I’m currently open for a new job opportunity, If you think i can add
             value to your company or team, my inbox is always open. Whether you
             have a question or just want to say hi, kindly click the button
@@ -623,7 +711,7 @@ function App() {
             <div className="flex flex-row justify-center">
               <a
                 href="mailto:noruwaobaseki@gmail.com"
-                className="px-10 py-4 lg:text-lg text-base text-indigo-800 font-bold rounded-md border-[3px] border-indigo-700"
+                className="call-to-action font-mono"
               >
                 Say Hi
               </a>
@@ -700,15 +788,8 @@ function App() {
           </ul>
         </div>
         <div className="sm:grid">
-          <div className="sm:flex sm:flex-row sm:place-content-center text-slate-800 text-center">
-            Design inspiration by{" "}
-            <a
-              href="https://brittanychiang.com/"
-              className="mx-2 text-indigo-800 font-semibold"
-            >
-              Brittany Chiang.
-            </a>
-            Built by
+          <div className="sm:flex sm:flex-row sm:place-content-center font-mono text-slate-800 text-center">
+            Designed & Developed by
             <span className="text-indigo-800 font-semibold ml-2">
               Obaseki Noruwa
             </span>
