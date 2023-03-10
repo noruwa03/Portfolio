@@ -888,6 +888,10 @@ video {
   fill: #facc15;
 }
 
+.fill-white {
+  fill: #fff;
+}
+
 .stroke-indigo-700 {
   stroke: #4338ca;
 }
@@ -1046,6 +1050,11 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.text-\[\#ffe3e2\] {
+  --tw-text-opacity: 1;
+  color: rgb(255 227 226 / var(--tw-text-opacity));
 }
 
 .underline {
@@ -1237,6 +1246,22 @@ video {
 
 .hover\:stroke-red-500:hover {
   stroke: #ef4444;
+}
+
+.hover\:stroke-\[\#ffe3e2\]:hover {
+  stroke: #ffe3e2;
+}
+
+.hover\:stroke-red-400:hover {
+  stroke: #f87171;
+}
+
+.hover\:stroke-red-300:hover {
+  stroke: #fca5a5;
+}
+
+.hover\:stroke-\[\]:hover {
+  stroke-width: ;
 }
 
 .hover\:text-indigo-900:hover {
@@ -1464,6 +1489,10 @@ video {
 
   .lg\:bg-transparent {
     background-color: transparent;
+  }
+
+  .lg\:fill-gray-600 {
+    fill: #4b5563;
   }
 
   .lg\:px-14 {
