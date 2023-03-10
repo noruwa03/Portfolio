@@ -1,4 +1,4 @@
-import Logo from "./assets/icons/logo.svg"
+import Logo from "./assets/icons/logo.svg";
 import Resume from "./assets/resume.pdf";
 import MyImage from "./assets/images/Obaseki_Noruwa.jpg";
 import Haraka from "./assets/images/haraka.png";
@@ -101,7 +101,7 @@ function App() {
       <nav className="lg:px-14 sm:px-8 px-6 grid grid-cols-8 lg:h-[5.5rem] sm:h-[4rem] h-[4rem] dark:bg-red-300  items-center sticky top-0 z-40  border-t border-transparent backdrop-blur-md">
         <a
           href="/"
-          className="col-span-2 lg:text-3xl text-3xl font-mono font-extrabold text-indigo-800 relative sm:top-0 sm:left-0 "
+          className="col-span-2 lg:text-3xl text-3xl font-mono font-extrabold text-indigo-800 relative sm:top-0 sm:left-0"
         >
           {/* Nor
           <span className="text-red-400">uwa</span> */}
@@ -262,10 +262,10 @@ function App() {
         <h1 className="lg:text-2xl text-lg font-mono font-semibold text-red-400 lg:mb-8 mb-2">
           Hi, my name is
         </h1>
-        <h2 className="lg:text-7xl sm:text-5xl font-mono text-4xl text-transparent bg-clip-text bg-gradient-to-r from-blue-900 to-purple-600 font-extrabold lg:my-2 my-1">
+        <h2 className="lg:text-7xl sm:text-5xl font-mono text-3xl text-transparent bg-clip-text bg-gradient-to-r from-blue-900 to-purple-600 font-extrabold lg:my-2 my-1">
           Obaseki Noruwa.
         </h2>
-        <h3 className="lg:text-6xl sm:text-5xl font-mono text-4xl text-indigo-800 font-extrabold lg:my-0 my-0">
+        <h3 className="lg:text-6xl sm:text-5xl font-mono text-3xl text-indigo-800 font-extrabold lg:my-0 my-0">
           Creative tech enthusiast.
         </h3>
         <p className="lg:w-3/5 w-5/5 mt-8  sm:mb-10  mb-16 font-mono lg:text-lg text-base text-slate-700 font-normal">
@@ -309,7 +309,7 @@ function App() {
             </p>
             <div className="grid grid-cols-4 gap-8">
               <div className="col-span-2 space-y-1">
-                <div className="flex flex-row items-center sm:space-x-3 space-x-2">
+                <div className="flex flex-row items-center sm:space-x-3 space-x-1">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="12"
@@ -320,11 +320,11 @@ function App() {
                   >
                     <path d="M8 12a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm0 1A5 5 0 1 0 8 3a5 5 0 0 0 0 10z" />
                   </svg>
-                  <h4 className="lg:text-base text-xs font-mono text-slate-600 font-normal">
+                  <h4 className="lg:text-base text-sm font-mono text-slate-600 font-normal">
                     HTML, CSS, SCSS
                   </h4>
                 </div>
-                <div className="flex flex-row items-center sm:space-x-3 space-x-2">
+                <div className="flex flex-row items-center sm:space-x-3 space-x-1">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="12"
@@ -335,11 +335,11 @@ function App() {
                   >
                     <path d="M8 12a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm0 1A5 5 0 1 0 8 3a5 5 0 0 0 0 10z" />
                   </svg>
-                  <h4 className="lg:text-base text-xs font-mono text-slate-600 font-normal">
+                  <h4 className="lg:text-base text-sm font-mono text-slate-600 font-normal">
                     JavaScript ES6+
                   </h4>
                 </div>
-                <div className="flex flex-row items-center sm:space-x-3 space-x-2">
+                <div className="flex flex-row items-center sm:space-x-3 space-x-1">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="12"
@@ -350,11 +350,11 @@ function App() {
                   >
                     <path d="M8 12a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm0 1A5 5 0 1 0 8 3a5 5 0 0 0 0 10z" />
                   </svg>
-                  <h4 className="lg:text-base text-xs font-mono text-slate-600 font-normal">
+                  <h4 className="lg:text-base text-sm font-mono text-slate-600 font-normal">
                     Typescript
                   </h4>
                 </div>
-                <div className="flex flex-row items-center sm:space-x-3 space-x-2">
+                <div className="flex flex-row items-center sm:space-x-3 space-x-1">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="12"
@@ -365,14 +365,29 @@ function App() {
                   >
                     <path d="M8 12a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm0 1A5 5 0 1 0 8 3a5 5 0 0 0 0 10z" />
                   </svg>
-                  <h4 className="lg:text-base text-xs font-mono text-slate-600 font-normal">
-                    Vue Js & Nuxt Js
+                  <h4 className="lg:text-base text-sm font-mono text-slate-600 font-normal">
+                    Vue Js
+                  </h4>
+                </div>
+                <div className="flex flex-row items-center sm:space-x-3 space-x-1">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="12"
+                    height="12"
+                    fill="currentColor"
+                    className="bi bi-record stroke-indigo-800"
+                    viewBox="0 0 16 16"
+                  >
+                    <path d="M8 12a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm0 1A5 5 0 1 0 8 3a5 5 0 0 0 0 10z" />
+                  </svg>
+                  <h4 className="lg:text-base text-sm font-mono text-slate-600 font-normal">
+                    Nuxt Js
                   </h4>
                 </div>
               </div>
 
               <div className="col-span-2 space-y-1">
-                <div className="flex flex-row items-center sm:space-x-3 space-x-2">
+                <div className="flex flex-row items-center sm:space-x-3 space-x-1">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="12"
@@ -383,11 +398,11 @@ function App() {
                   >
                     <path d="M8 12a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm0 1A5 5 0 1 0 8 3a5 5 0 0 0 0 10z" />
                   </svg>
-                  <h4 className="lg:text-base text-xs font-mono text-slate-600 font-normal">
-                    React Js & Next Js
+                  <h4 className="lg:text-base text-sm font-mono text-slate-600 font-normal">
+                    React Js
                   </h4>
                 </div>
-                <div className="flex flex-row items-center sm:space-x-3 space-x-2">
+                <div className="flex flex-row items-center sm:space-x-3 space-x-1">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="12"
@@ -398,11 +413,26 @@ function App() {
                   >
                     <path d="M8 12a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm0 1A5 5 0 1 0 8 3a5 5 0 0 0 0 10z" />
                   </svg>
-                  <h4 className="lg:text-base text-xs font-mono text-slate-600 font-normal">
+                  <h4 className="lg:text-base text-sm font-mono text-slate-600 font-normal">
+                    Next Js
+                  </h4>
+                </div>
+                <div className="flex flex-row items-center sm:space-x-3 space-x-1">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="12"
+                    height="12"
+                    fill="currentColor"
+                    className="bi bi-record stroke-indigo-800"
+                    viewBox="0 0 16 16"
+                  >
+                    <path d="M8 12a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm0 1A5 5 0 1 0 8 3a5 5 0 0 0 0 10z" />
+                  </svg>
+                  <h4 className="lg:text-base text-sm font-mono text-slate-600 font-normal">
                     Figma
                   </h4>
                 </div>
-                <div className="flex flex-row items-center sm:space-x-3 space-x-2">
+                <div className="flex flex-row items-center sm:space-x-3 space-x-1">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="12"
@@ -413,11 +443,11 @@ function App() {
                   >
                     <path d="M8 12a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm0 1A5 5 0 1 0 8 3a5 5 0 0 0 0 10z" />
                   </svg>
-                  <h4 className="lg:text-base text-xs font-mono text-slate-600 font-normal">
+                  <h4 className="lg:text-base text-sm font-mono text-slate-600 font-normal">
                     Node
                   </h4>
                 </div>
-                <div className="flex flex-row items-center sm:space-x-3 space-x-2">
+                <div className="flex flex-row items-center sm:space-x-3 space-x-1">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="12"
@@ -428,7 +458,7 @@ function App() {
                   >
                     <path d="M8 12a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm0 1A5 5 0 1 0 8 3a5 5 0 0 0 0 10z" />
                   </svg>
-                  <h4 className="lg:text-base text-xs font-mono text-slate-600 font-normal">
+                  <h4 className="lg:text-base text-sm font-mono text-slate-600 font-normal">
                     PHP & Laravel
                   </h4>
                 </div>
@@ -788,7 +818,7 @@ function App() {
           </ul>
         </div>
         <div className="sm:grid">
-          <div className="sm:flex sm:flex-row sm:place-content-center font-mono text-slate-800 text-center">
+          <div className="sm:flex sm:flex-row sm:place-content-center font-mono text-sm text-slate-800 text-center">
             Designed & Developed by
             <span className="text-indigo-800 font-semibold ml-2">
               Obaseki Noruwa
