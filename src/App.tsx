@@ -115,7 +115,7 @@ function App() {
             <li>
               <h5
                 onClick={goToAbout}
-                className="lg:text-base text-2xl font-mono font-semibold lg:text-slate-900 text-white px-2 py-2 cursor-pointer hover:text-indigo-900"
+                className="lg:text-base text-2xl font-mono lg:font-semibold font-extrabold lg:text-slate-900 text-white px-2 py-2 cursor-pointer hover:text-indigo-900"
               >
                 About
               </h5>
@@ -124,7 +124,7 @@ function App() {
             <li>
               <h5
                 onClick={goToExperience}
-                className="lg:text-base text-2xl font-mono font-semibold lg:text-slate-900 text-white px-2 py-2 cursor-pointer hover:text-indigo-900"
+                className="lg:text-base text-2xl font-mono lg:font-semibold font-extrabold lg:text-slate-900 text-white px-2 py-2 cursor-pointer hover:text-indigo-900"
               >
                 Experience
               </h5>
@@ -132,7 +132,7 @@ function App() {
             <li>
               <h5
                 onClick={goToWork}
-                className="lg:text-base text-2xl font-mono font-semibold lg:text-slate-900 text-white px-2 py-2 cursor-pointer hover:text-indigo-900"
+                className="lg:text-base text-2xl font-mono lg:font-semibold font-extrabold lg:text-slate-900 text-white px-2 py-2 cursor-pointer hover:text-indigo-900"
               >
                 Work
               </h5>
@@ -140,7 +140,7 @@ function App() {
             <li>
               <a
                 onClick={goToContact}
-                className="lg:text-base text-2xl font-mono font-semibold lg:text-slate-900 text-white px-2 py-2 cursor-pointer hover:text-indigo-900"
+                className="lg:text-base text-2xl font-mono lg:font-semibold font-extrabold lg:text-slate-900 text-white px-2 py-2 cursor-pointer hover:text-indigo-900"
               >
                 Contact
               </a>
@@ -148,7 +148,7 @@ function App() {
             <li>
               <a
                 href={Resume}
-                className="lg:text-base text-2xl font-mono font-semibold lg:text-indigo-800 text-white  border-2 lg:border-indigo-700 border-white  lg:px-4 lg:py-2 px-10 py-4 block lg:mt-0 mt-5 rounded-md"
+                className="lg:text-base text-2xl font-mono lg:font-semibold font-extrabold lg:text-indigo-800 text-white  border-2 lg:border-indigo-700 border-white  lg:px-4 lg:py-2 px-10 py-4 block lg:mt-0 mt-5 rounded-md"
                 download
               >
                 Resume
@@ -487,7 +487,7 @@ function App() {
           <div className="lg:col-span-4 sm:col-span-3 col-span-4">
             <a
               href="/"
-              className="lg:text-2xl text-base font-mono text-slate-700 font-semibold"
+              className="lg:text-2xl text-base font-mono text-slate-700 font-bold"
             >
               Ecolabz
             </a>
