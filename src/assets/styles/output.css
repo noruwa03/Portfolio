@@ -754,6 +754,10 @@ video {
   gap: 2rem;
 }
 
+.gap-2 {
+  gap: 0.5rem;
+}
+
 .gap-x-20 {
   -moz-column-gap: 5rem;
        column-gap: 5rem;
@@ -1323,6 +1327,11 @@ video {
     font-size: 3rem;
     line-height: 1;
   }
+
+  .sm\:text-base {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -1426,6 +1435,10 @@ video {
 
   .lg\:items-center {
     align-items: center;
+  }
+
+  .lg\:gap-8 {
+    gap: 2rem;
   }
 
   .lg\:space-x-12 > :not([hidden]) ~ :not([hidden]) {

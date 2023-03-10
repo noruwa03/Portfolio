@@ -268,7 +268,7 @@ function App() {
         <h3 className="lg:text-6xl sm:text-5xl font-mono text-3xl text-indigo-800 font-extrabold lg:my-0 my-0">
           Creative tech enthusiast.
         </h3>
-        <p className="lg:w-3/5 w-5/5 mt-8  sm:mb-10  mb-16 font-mono lg:text-lg text-base text-slate-700 font-normal">
+        <p className="lg:w-3/5 w-5/5 mt-8  sm:mb-10  mb-14 font-mono lg:text-lg text-base text-slate-700 font-normal">
           I'm a creative web developer that design, build scaleable web
           applications. I help awesome people to build websites. I have great
           organizational and time utilization skill with a willingness to learn.
@@ -291,23 +291,23 @@ function App() {
         </h1>
         <div className="grid lg:grid-cols-8 grid-cols-4 gap-x-20 gap-y-8">
           <div className="lg:col-span-5 col-span-4">
-            <p className="lg:text-lg font-mono text-base text-slate-600 font-normal mb-4">
+            <p className="lg:text-lg font-mono sm:text-base text-sm text-slate-600 font-normal mb-4">
               Hi there, My name is Noruwa and i am able to design, code and
               deploy web apps in an organized and efficient manner. I am an avid
               learner, quick to grasp new technologies to design effective and
               scalable products.
             </p>
-            <p className="lg:text-lg font-mono text-base text-slate-600 font-normal mb-4">
+            <p className="lg:text-lg font-mono sm:text-base text-sm text-slate-600 font-normal mb-4">
               I have experience implementing links, tools and third party APIs
               into web designs and i can prepare documents and keep accurate
               daily reports. I have excellent verbal and written skills that
               make it easy to understand information and to articulate my ideas
               clearly, so others can understand.
             </p>
-            <p className="lg:text-lg font-mono text-base text-slate-600 font-normal mb-4">
+            <p className="lg:text-lg font-mono sm:text-base text-sm text-slate-600 font-normal mb-4">
               Here is a list of languages and tools i use:
             </p>
-            <div className="grid grid-cols-4 gap-8">
+            <div className="grid grid-cols-4 lg:gap-8 gap-2">
               <div className="col-span-2 space-y-1">
                 <div className="flex flex-row items-center sm:space-x-3 space-x-1">
                   <svg
@@ -493,27 +493,27 @@ function App() {
             </a>
             <p className="lg:text-lg text-base font-mono text-slate-600 font-normal mt-2 mb-4">
               Frontend Engineer @ Ecolabz
-              <span className="block text-base font-semibold text-indigo-700">
+              <span className="block lg:text-base text-sm font-semibold text-indigo-700">
                 June 2022 - Present
               </span>
             </p>
             <div className="">
               <div className="space-y-2">
                 <div>
-                  <h4 className="lg:text-base font-mono text-base text-slate-600 font-normal">
+                  <h4 className="lg:text-base text-sm font-mono text-slate-600 font-normal">
                     Collaborated with the ui/ux designer to build the website,
                     Write modern, maintainable code for ecolabz web projects
                     projects.
                   </h4>
                 </div>
                 <div>
-                  <h4 className="lg:text-base font-mono text-base text-slate-600 font-normal">
+                  <h4 className="lg:text-base text-sm font-mono text-slate-600 font-normal">
                     Integrated third-party mailchimp API to improved product
                     accessibility and communication.
                   </h4>
                 </div>
                 <div>
-                  <h4 className="lg:text-base font-mono text-base text-slate-600 font-normal">
+                  <h4 className="lg:text-base text-sm font-mono text-slate-600 font-normal">
                     Work with different tools, platforms, frameworks, and
                     backend as a service such as firebase.
                   </h4>
@@ -537,11 +537,11 @@ function App() {
             <img src={Haraka} alt="Haraka" className="mb-4" />
             <a
               href="https://haraka.shop"
-              className="lg:text-2xl text-lg font-mono text-slate-800 font-semibold underline decoration-wavy decoration-indigo-800"
+              className="lg:text-2xl text-lg font-mono text-slate-800 font-bold underline decoration-wavy decoration-indigo-800"
             >
               Haraka shop
             </a>
-            <p className="text-base font-mono text-slate-800 mt-6">
+            <p className="lg:text-base text-sm font-mono text-slate-800 mt-6">
               Haraka is an online food and grocery order and delivery platform.
               Skip the confusing hours of searching and comparing vendors with
               all stores, reviews and delivery within your reach.
@@ -551,11 +551,11 @@ function App() {
             <img src={Ecolabz} alt="Ecolabz" className="mb-4" />
             <a
               href="https://ecolabz.io"
-              className="lg:text-2xl text-lg font-mono text-slate-800 font-semibold underline decoration-wavy decoration-indigo-800"
+              className="lg:text-2xl text-lg font-mono text-slate-800 font-bold underline decoration-wavy decoration-indigo-800"
             >
               Ecolabz
             </a>
-            <p className="text-base font-mono text-slate-800 mt-6">
+            <p className="lg:text-base text-sm font-mono text-slate-800 mt-6">
               Ecolabz is a startup venture studio that focuses on ideating,
               creating, designing, developing and launching startups and
               companies.
@@ -599,21 +599,21 @@ function App() {
               <h3 className="font-bold text-lg font-mono text-slate-600">
                 Arbuzzer
               </h3>
-              <p className="text-base font-mono text-slate-800">
+              <p className="sm:text-base text-sm font-mono text-slate-800">
                 A single web page application of a logistics and supply chain
                 service provider.
               </p>
               <div className="flex flex-row flex-wrap space-x-4">
-                <p className="text-base font-semibold font-mono text-slate-800">
+                <p className="lg:text-base text-sm font-semibold font-mono text-slate-800">
                   Stack:
                 </p>
-                <p className="text-base font-normal font-mono text-slate-800">
+                <p className="lg:text-base text-sm font-normal font-mono text-slate-800">
                   HTML
                 </p>
-                <p className="text-base font-normal font-mono text-slate-800">
+                <p className="lg:text-base text-sm font-normal font-mono text-slate-800">
                   CSS
                 </p>
-                <p className="text-base font-normal font-mono text-slate-800">
+                <p className="lg:text-base text-sm font-normal font-mono text-slate-800">
                   JavaScript
                 </p>
               </div>
@@ -649,21 +649,21 @@ function App() {
               <h3 className="font-bold text-lg font-mono text-slate-600">
                 Devon trade
               </h3>
-              <p className="text-base font-mono text-slate-800">
+              <p className="sm:text-base text-sm font-mono text-slate-800">
                 Devon is a group of financial and cryptocurrency experts that
                 invest in mining and cryptocurrency trading.
               </p>
               <div className="flex flex-row flex-wrap space-x-4">
-                <p className="text-base font-semibold font-mono text-slate-800">
+                <p className="lg:text-base text-sm font-semibold font-mono text-slate-800">
                   Stack:
                 </p>
-                <p className="text-base font-normal font-mono text-slate-800">
+                <p className="lg:text-base text-sm font-normal font-mono text-slate-800">
                   HTML
                 </p>
-                <p className="text-base font-normal font-mono text-slate-800">
+                <p className="lg:text-base text-sm font-normal font-mono text-slate-800">
                   CSS
                 </p>
-                <p className="text-base font-normal font-mono text-slate-800">
+                <p className="lg:text-base text-sm font-normal font-mono text-slate-800">
                   JavaScript
                 </p>
               </div>
@@ -699,21 +699,21 @@ function App() {
               <h3 className="font-bold text-lg font-mono text-slate-600">
                 Hospital dashboard
               </h3>
-              <p className="text-base font-mono text-slate-800">
+              <p className="sm:text-base text-sm font-mono text-slate-800">
                 A multi page web ui for the management of patients, and services
                 in an hospital.
               </p>
               <div className="flex flex-row flex-wrap space-x-4">
-                <p className="text-base font-semibold font-mono text-slate-800">
+                <p className="lg:text-base text-sm font-semibold font-mono text-slate-800">
                   Stack:
                 </p>
-                <p className="text-base font-normal font-mono text-slate-800">
+                <p className="lg:text-base text-sm font-normal font-mono text-slate-800">
                   HTML
                 </p>
-                <p className="text-base font-normal font-mono text-slate-800">
+                <p className="lg:text-base text-sm font-normal font-mono text-slate-800">
                   CSS
                 </p>
-                <p className="text-base font-normal font-mono text-slate-800">
+                <p className="lg:text-base text-sm font-normal font-mono text-slate-800">
                   JavaScript
                 </p>
               </div>
@@ -731,7 +731,7 @@ function App() {
           Get In Touch
         </h2>
         <div className="lg:w-3/5 w-5/5 mx-auto my-8">
-          <p className="lg:text-lg text-base font-mono text-center text-slate-800 mb-14">
+          <p className="lg:text-lg sm:text-base text-sm font-mono text-center text-slate-800 mb-14">
             I’m currently open for a new job opportunity, If you think i can add
             value to your company or team, my inbox is always open. Whether you
             have a question or just want to say hi, kindly click the button
