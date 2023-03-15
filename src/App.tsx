@@ -8,6 +8,8 @@ import { useRef } from "react";
 function App() {
   const menuBtn = useRef<HTMLDivElement | null>(null);
   const navItem = useRef<HTMLDivElement | null>(null);
+  const changeBg = useRef<HTMLDivElement | null>(null);
+
 
   const sun = useRef<any | null>(null);
   const moon = useRef<any | null>(null);
@@ -54,7 +56,7 @@ function App() {
   const contact = useRef<HTMLDivElement | null>(null);
 
   const toggleMenu = () => {
-    menuBtn.current?.classList.toggle("active");
+    menuBtn.current?.classList.toggle("toggleMenu");
     navItem.current?.classList.toggle("hidden");
   };
 
@@ -186,10 +188,10 @@ function App() {
         </div>
         <div
           onClick={toggleMenu}
-          className="menu-btn fixed top-2 right-5 lg:hidden flex items-center justify-center z-50"
+          className="fixed top-7 bg-yellow-300 right-8 lg:hidden z-50"
           ref={menuBtn}
         >
-          <div className="menu-btn__burger"></div>
+          <div className="w-6 h-[2px] bg-[#f87171] rounded transition-all duration-500 before:absolute before:content-[''] before:w-8 before:h-[2px] before:bg-[#f87171] before:rounded before:-translate-y-2 before:transition-all before:duration-500 after:absolute after:content-[''] after:w-8 after:h-[2px] after:bg-[#f87171] after:rounded after:translate-y-2 after:transition-all after:duration-500" ref={changeBg}></div>
         </div>
       </nav>
       <div className="hidden fixed top-0 lg:left-14 w-[4rem] h-screen lg:grid">
@@ -269,7 +271,7 @@ function App() {
         <h3 className="lg:text-6xl sm:text-5xl font-mono text-3xl text-indigo-800 font-extrabold lg:my-0 my-0">
           Creative tech enthusiast.
         </h3>
-        <p className="lg:w-3/5 w-5/5 mt-8  sm:mb-10  mb-14 font-mono lg:text-lg text-base text-slate-700 font-normal">
+        <p className="lg:w-3/5 w-5/5 mt-8  sm:mb-10  mb-14 font-mono lg:text-lg text-base text-slate-700 font-medium">
           I'm a creative web developer that design, build scaleable web
           applications. I help awesome people to build websites. I have great
           organizational and time utilization skill with a willingness to learn.
@@ -292,20 +294,20 @@ function App() {
         </h1>
         <div className="grid lg:grid-cols-8 grid-cols-4 gap-x-20 gap-y-8">
           <div className="lg:col-span-5 col-span-4">
-            <p className="lg:text-lg font-mono sm:text-base text-sm text-slate-600 font-normal mb-4">
+            <p className="lg:text-lg font-mono sm:text-base text-sm text-slate-600 font-medium mb-4">
               Hi there, My name is Noruwa and i am able to design, code and
               deploy web apps in an organized and efficient manner. I am an avid
               learner, quick to grasp new technologies to design effective and
               scalable products.
             </p>
-            <p className="lg:text-lg font-mono sm:text-base text-sm text-slate-600 font-normal mb-4">
+            <p className="lg:text-lg font-mono sm:text-base text-sm text-slate-600 font-medium mb-4">
               I have experience implementing links, tools and third party APIs
               into web designs and i can prepare documents and keep accurate
               daily reports. I have excellent verbal and written skills that
               make it easy to understand information and to articulate my ideas
               clearly, so others can understand.
             </p>
-            <p className="lg:text-lg font-mono sm:text-base text-sm text-slate-600 font-normal mb-4">
+            <p className="lg:text-lg font-mono sm:text-base text-sm text-slate-600 font-medium mb-4">
               Here is a list of languages and tools i use:
             </p>
             <div className="grid grid-cols-4 lg:gap-8 gap-2">
@@ -321,7 +323,7 @@ function App() {
                   >
                     <path d="M8 12a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm0 1A5 5 0 1 0 8 3a5 5 0 0 0 0 10z" />
                   </svg>
-                  <h4 className="lg:text-base text-sm font-mono text-slate-600 font-normal">
+                  <h4 className="lg:text-base text-sm font-mono text-slate-600 font-medium">
                     HTML, CSS, SCSS
                   </h4>
                 </div>
@@ -336,7 +338,7 @@ function App() {
                   >
                     <path d="M8 12a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm0 1A5 5 0 1 0 8 3a5 5 0 0 0 0 10z" />
                   </svg>
-                  <h4 className="lg:text-base text-sm font-mono text-slate-600 font-normal">
+                  <h4 className="lg:text-base text-sm font-mono text-slate-600 font-medium">
                     JavaScript ES6+
                   </h4>
                 </div>
@@ -351,7 +353,7 @@ function App() {
                   >
                     <path d="M8 12a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm0 1A5 5 0 1 0 8 3a5 5 0 0 0 0 10z" />
                   </svg>
-                  <h4 className="lg:text-base text-sm font-mono text-slate-600 font-normal">
+                  <h4 className="lg:text-base text-sm font-mono text-slate-600 font-medium">
                     Typescript
                   </h4>
                 </div>
@@ -366,7 +368,7 @@ function App() {
                   >
                     <path d="M8 12a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm0 1A5 5 0 1 0 8 3a5 5 0 0 0 0 10z" />
                   </svg>
-                  <h4 className="lg:text-base text-sm font-mono text-slate-600 font-normal">
+                  <h4 className="lg:text-base text-sm font-mono text-slate-600 font-medium">
                     Vue Js
                   </h4>
                 </div>
@@ -381,7 +383,7 @@ function App() {
                   >
                     <path d="M8 12a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm0 1A5 5 0 1 0 8 3a5 5 0 0 0 0 10z" />
                   </svg>
-                  <h4 className="lg:text-base text-sm font-mono text-slate-600 font-normal">
+                  <h4 className="lg:text-base text-sm font-mono text-slate-600 font-medium">
                     Nuxt Js
                   </h4>
                 </div>
@@ -399,7 +401,7 @@ function App() {
                   >
                     <path d="M8 12a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm0 1A5 5 0 1 0 8 3a5 5 0 0 0 0 10z" />
                   </svg>
-                  <h4 className="lg:text-base text-sm font-mono text-slate-600 font-normal">
+                  <h4 className="lg:text-base text-sm font-mono text-slate-600 font-medium">
                     React Js
                   </h4>
                 </div>
@@ -414,7 +416,7 @@ function App() {
                   >
                     <path d="M8 12a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm0 1A5 5 0 1 0 8 3a5 5 0 0 0 0 10z" />
                   </svg>
-                  <h4 className="lg:text-base text-sm font-mono text-slate-600 font-normal">
+                  <h4 className="lg:text-base text-sm font-mono text-slate-600 font-medium">
                     Next Js
                   </h4>
                 </div>
@@ -429,7 +431,7 @@ function App() {
                   >
                     <path d="M8 12a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm0 1A5 5 0 1 0 8 3a5 5 0 0 0 0 10z" />
                   </svg>
-                  <h4 className="lg:text-base text-sm font-mono text-slate-600 font-normal">
+                  <h4 className="lg:text-base text-sm font-mono text-slate-600 font-medium">
                     Figma
                   </h4>
                 </div>
@@ -444,7 +446,7 @@ function App() {
                   >
                     <path d="M8 12a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm0 1A5 5 0 1 0 8 3a5 5 0 0 0 0 10z" />
                   </svg>
-                  <h4 className="lg:text-base text-sm font-mono text-slate-600 font-normal">
+                  <h4 className="lg:text-base text-sm font-mono text-slate-600 font-medium">
                     Node
                   </h4>
                 </div>
@@ -459,7 +461,7 @@ function App() {
                   >
                     <path d="M8 12a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm0 1A5 5 0 1 0 8 3a5 5 0 0 0 0 10z" />
                   </svg>
-                  <h4 className="lg:text-base text-sm font-mono text-slate-600 font-normal">
+                  <h4 className="lg:text-base text-sm font-mono text-slate-600 font-medium">
                     PHP & Laravel
                   </h4>
                 </div>
@@ -501,20 +503,20 @@ function App() {
             <div className="">
               <div className="space-y-2">
                 <div>
-                  <h4 className="lg:text-base text-sm font-mono text-slate-600 font-normal">
+                  <h4 className="lg:text-base text-sm font-mono text-slate-600 font-medium">
                     Collaborated with the ui/ux designer to build the website,
                     Write modern, maintainable code for ecolabz web projects
                     projects.
                   </h4>
                 </div>
                 <div>
-                  <h4 className="lg:text-base text-sm font-mono text-slate-600 font-normal">
+                  <h4 className="lg:text-base text-sm font-mono text-slate-600 font-medium">
                     Integrated third-party mailchimp API to improved product
                     accessibility and communication.
                   </h4>
                 </div>
                 <div>
-                  <h4 className="lg:text-base text-sm font-mono text-slate-600 font-normal">
+                  <h4 className="lg:text-base text-sm font-mono text-slate-600 font-medium">
                     Work with different tools, platforms, frameworks, and
                     backend as a service such as firebase.
                   </h4>
@@ -542,7 +544,7 @@ function App() {
             >
               Haraka shop
             </a>
-            <p className="lg:text-base text-sm font-mono text-slate-800 mt-6">
+            <p className="lg:text-base text-sm font-mono font-medium text-slate-800 mt-6">
               Haraka is an online food and grocery order and delivery platform.
               Skip the confusing hours of searching and comparing vendors with
               all stores, reviews and delivery within your reach.
@@ -556,7 +558,7 @@ function App() {
             >
               Ecolabz
             </a>
-            <p className="lg:text-base text-sm font-mono text-slate-800 mt-6">
+            <p className="lg:text-base text-sm font-mono font-medium text-slate-800 mt-6">
               Ecolabz is a startup venture studio that focuses on ideating,
               creating, designing, developing and launching startups and
               companies.
@@ -732,7 +734,7 @@ function App() {
           Get In Touch
         </h2>
         <div className="lg:w-3/5 w-5/5 mx-auto my-8">
-          <p className="lg:text-lg sm:text-base text-sm font-mono text-center text-slate-800 mb-14">
+          <p className="lg:text-lg sm:text-base text-sm font-medium font-mono text-center text-slate-800 mb-14">
             I’m currently open for a new job opportunity, If you think i can add
             value to your company or team, my inbox is always open. Whether you
             have a question or just want to say hi, kindly click the button
