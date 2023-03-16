@@ -36,11 +36,11 @@ function App() {
         >
           <path
             d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
-            className="stroke-slate-400"
+            className="stroke-slate-500"
           ></path>
           <path
             d="M12 4v1M17.66 6.344l-.828.828M20.005 12.004h-1M17.66 17.664l-.828-.828M12 20.01V19M6.34 17.664l.835-.836M3.995 12.004h1.01M6 6l.835.836"
-            className="stroke-slate-400"
+            className="stroke-slate-500"
           ></path>
         </svg>
       ),
@@ -57,13 +57,13 @@ function App() {
           ></path>
           <path
             d="m17.715 15.15.95.316a1 1 0 0 0-1.445-1.185l.495.869ZM9 6.035l.846.534a1 1 0 0 0-1.14-1.49L9 6.035Zm8.221 8.246a5.47 5.47 0 0 1-2.72.718v2a7.47 7.47 0 0 0 3.71-.98l-.99-1.738Zm-2.72.718A5.5 5.5 0 0 1 9 9.5H7a7.5 7.5 0 0 0 7.5 7.5v-2ZM9 9.5c0-1.079.31-2.082.845-2.93L8.153 5.5A7.47 7.47 0 0 0 7 9.5h2Zm-4 3.368C5 10.089 6.815 7.75 9.292 6.99L8.706 5.08C5.397 6.094 3 9.201 3 12.867h2Zm6.042 6.136C7.718 19.003 5 16.268 5 12.867H3c0 4.48 3.588 8.136 8.042 8.136v-2Zm5.725-4.17c-.81 2.433-3.074 4.17-5.725 4.17v2c3.552 0 6.553-2.327 7.622-5.537l-1.897-.632Z"
-            className="fill-slate-400 dark:fill-slate-500"
+            className="fill-slate-500 dark:fill-slate-500"
           ></path>
           <path
             fillRule="evenodd"
             clipRule="evenodd"
             d="M17 3a1 1 0 0 1 1 1 2 2 0 0 0 2 2 1 1 0 1 1 0 2 2 2 0 0 0-2 2 1 1 0 1 1-2 0 2 2 0 0 0-2-2 1 1 0 1 1 0-2 2 2 0 0 0 2-2 1 1 0 0 1 1-1Z"
-            className="fill-slate-400 dark:fill-slate-500"
+            className="fill-slate-500 dark:fill-slate-500"
           ></path>
         </svg>
       ),
@@ -76,7 +76,7 @@ function App() {
           width="20"
           height="20"
           fill="currentColor"
-          className="bi bi-laptop fill-slate-500"
+          className="bi bi-laptop fill-slate-500 w-6 h-6"
           viewBox="0 0 16 16"
         >
           <path d="M13.5 3a.5.5 0 0 1 .5.5V11H2V3.5a.5.5 0 0 1 .5-.5h11zm-11-1A1.5 1.5 0 0 0 1 3.5V12h14V3.5A1.5 1.5 0 0 0 13.5 2h-11zM0 12.5h16a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5z" />
@@ -276,13 +276,13 @@ function App() {
               </li>
               <div
                 ref={themeMenu}
-                className="hidden lg:fixed lg:top-20 lg:right-7  lg:translate-x-0 lg:translate-y-0 fixed translate-x-[50%] translate-y-[50%] top-[50%] right-[50%]"
+                className="hidden lg:fixed lg:top-24 lg:right-7  lg:translate-x-0 lg:translate-y-0 fixed translate-x-[50%] translate-y-[50%] top-[50%] right-[50%]"
               >
-                <div className="rounded bg-white dark:bg-slate-100 shadow shadow-indigo-400 py-1  w-36 flex flex-col justify-center">
+                <div className="rounded-md bg-white dark:bg-slate-100 shadow shadow-gray-200 py-1  w-40 flex flex-col justify-center">
                   {options.map((data) => (
                     <div
                       key={data.text}
-                      className={`font-mono font-medium ${
+                      className={`font-mono font-bold ${
                         theme === data.text && "[&>span]:text-indigo-400"
                       } flex flex-row items-center space-x-4 [&>svg]:my-2 cursor-pointer px-2 hover:bg-gray-50`}
                       onClick={() => {
@@ -380,7 +380,7 @@ function App() {
           <h1 className="lg:text-2xl text-lg font-mono font-semibold dark:font-medium dark:text-red-300 text-red-400 lg:mb-8 mb-2">
             Hi, my name is
           </h1>
-          <h2 className="lg:text-7xl sm:text-5xl font-mono text-3xl text-transparent bg-clip-text bg-gradient-to-r from-blue-900 to-purple-600 dark:text-[#ccd6f6] font-extrabold lg:my-2 my-1">
+          <h2 className="lg:text-7xl sm:text-5xl font-mono text-[2em] text-transparent bg-clip-text bg-gradient-to-r from-blue-900 to-purple-600 dark:text-[#ccd6f6] font-extrabold lg:my-2 my-0">
             Obaseki Noruwa.
           </h2>
           <h3 className="lg:text-6xl sm:text-5xl font-mono text-3xl text-indigo-800 dark:text-[#8892b0] font-extrabold lg:my-0 my-0">
