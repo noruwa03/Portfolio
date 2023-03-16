@@ -696,6 +696,10 @@ video {
   width: 100%;
 }
 
+.w-44 {
+  width: 11rem;
+}
+
 .translate-x-\[50\%\] {
   --tw-translate-x: 50%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -1734,9 +1738,31 @@ video {
   }
 }
 
+.\[\&\>span\]\:text-base>span {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.\[\&\>span\]\:text-xs>span {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+.\[\&\>span\]\:text-\[0\.8em\]>span {
+  font-size: 0.8em;
+}
+
+.\[\&\>span\]\:text-\[0\.86em\]>span {
+  font-size: 0.86em;
+}
+
 .\[\&\>span\]\:text-indigo-400>span {
   --tw-text-opacity: 1;
   color: rgb(129 140 248 / var(--tw-text-opacity));
+}
+
+.\[\&\>span\]\:text-\[0\.8\]>span {
+  color: 0.8;
 }
 
 .\[\&\>svg\]\:my-2>svg {

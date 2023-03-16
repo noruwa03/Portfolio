@@ -278,11 +278,11 @@ function App() {
                 ref={themeMenu}
                 className="hidden lg:fixed lg:top-24 lg:right-7  lg:translate-x-0 lg:translate-y-0 fixed translate-x-[50%] translate-y-[50%] top-[50%] right-[50%]"
               >
-                <div className="rounded-md bg-white dark:bg-slate-100 shadow shadow-gray-200 py-1  w-40 flex flex-col justify-center">
+                <div className="rounded-md bg-white dark:bg-slate-100 shadow shadow-gray-200 py-1  w-44 flex flex-col justify-center">
                   {options.map((data) => (
                     <div
                       key={data.text}
-                      className={`font-mono font-bold ${
+                      className={`font-mono font-bold [&>span]:text-base ${
                         theme === data.text && "[&>span]:text-indigo-400"
                       } flex flex-row items-center space-x-4 [&>svg]:my-2 cursor-pointer px-2 hover:bg-gray-50`}
                       onClick={() => {
