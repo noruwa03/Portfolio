@@ -394,7 +394,7 @@ function App() {
           </p>
           <a
             href="mailto:noruwaobaseki@gmail.com"
-            className="font-mono call-to-action"
+            className="font-mono font-bold text-slate-800 py-4 px-10 call-to-action"
           >
             Hire me
           </a>
@@ -588,7 +588,7 @@ function App() {
               <img
                 src={MyImage}
                 alt="Obaseki Noruwa"
-                className="rounded-md shadow shadow-gray-200 lg:w-full sm:w-3/5 w-4/5 mx-auto"
+                className="rounded-md shadow shadow-gray-200 lg:w-full sm:w-3/5 w-4/5 mx-auto about-me-img"
               />
             </div>
           </div>
@@ -606,7 +606,7 @@ function App() {
             <div className="lg:col-span-4 sm:col-span-3 col-span-4">
               <a
                 href="/"
-                className="lg:text-2xl text-base font-mono text-slate-700 dark:text-gray-400 font-bold"
+                className="lg:text-2xl text-base font-mono text-slate-700 dark:text-gray-300 font-bold"
               >
                 Ecolabz
               </a>
@@ -656,7 +656,7 @@ function App() {
               <img src={Haraka} alt="Haraka" className="mb-4" />
               <a
                 href="https://haraka.shop"
-                className="lg:text-2xl text-lg font-mono text-slate-800 dark:text-gray-400 font-bold underline decoration-wavy decoration-indigo-800 dark:decoration-white"
+                className="lg:text-2xl text-lg font-mono text-slate-800 dark:text-white font-bold underline decoration-wavy decoration-indigo-800 dark:decoration-white"
               >
                 Haraka shop
               </a>
@@ -670,7 +670,7 @@ function App() {
               <img src={Ecolabz} alt="Ecolabz" className="mb-4" />
               <a
                 href="https://ecolabz.io"
-                className="lg:text-2xl text-lg font-mono text-slate-800 dark:text-gray-400 font-bold underline decoration-wavy decoration-indigo-800 dark:decoration-white"
+                className="lg:text-2xl text-lg font-mono text-slate-800 dark:text-white font-bold underline decoration-wavy decoration-indigo-800 dark:decoration-white"
               >
                 Ecolabz
               </a>
@@ -856,11 +856,11 @@ function App() {
               Whether you have a question or just want to say hi, kindly click
               the button below and send me a message.
             </p>
-            <div className="">
+            <div>
               <div className="flex flex-row justify-center">
                 <a
                   href="mailto:noruwaobaseki@gmail.com"
-                  className="call-to-action font-mono"
+                  className="font-mono font-bold text-slate-800 py-4 px-10 call-to-action"
                 >
                   Say Hi
                 </a>
