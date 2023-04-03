@@ -3,6 +3,8 @@ import Resume from "./assets/resume.pdf";
 import MyImage from "./assets/images/Obaseki_Noruwa.jpg";
 import Haraka from "./assets/images/haraka.png";
 import Ecolabz from "./assets/images/ecolabz.png";
+import DripAda from "./assets/images/dripada.png";
+import NFTImage from "./assets/images/nft_site.png"
 import { useRef, useState, useEffect } from "react";
 
 function App() {
@@ -16,7 +18,7 @@ function App() {
   };
 
   const [theme, setTheme] = useState(
-    window.localStorage.theme ? window.localStorage.theme : "system"
+    window.localStorage.theme ? window.localStorage.theme : "dark"
   );
 
   const element = window.document.documentElement;
@@ -189,7 +191,7 @@ function App() {
               <li>
                 <h5
                   onClick={goToAbout}
-                  className="lg:text-base text-2xl font-mono lg:font-semibold font-extrabold lg:text-slate-900 text-white dark:text-gray-100 px-2 py-2 cursor-pointer hover:text-indigo-900"
+                  className="lg:text-base text-2xl font-mono lg:font-semibold font-extrabold lg:text-slate-900 text-white dark:text-gray-100 px-2 py-2 cursor-pointer hover:text-indigo-900 dark:hover:text-red-300"
                 >
                   About
                 </h5>
@@ -198,7 +200,7 @@ function App() {
               <li>
                 <h5
                   onClick={goToExperience}
-                  className="lg:text-base text-2xl font-mono lg:font-semibold font-extrabold lg:text-slate-900 text-white dark:text-gray-100 px-2 py-2 cursor-pointer hover:text-indigo-900"
+                  className="lg:text-base text-2xl font-mono lg:font-semibold font-extrabold lg:text-slate-900 text-white dark:text-gray-100 px-2 py-2 cursor-pointer hover:text-indigo-900 dark:hover:text-red-300"
                 >
                   Experience
                 </h5>
@@ -206,7 +208,7 @@ function App() {
               <li>
                 <h5
                   onClick={goToWork}
-                  className="lg:text-base text-2xl font-mono lg:font-semibold font-extrabold lg:text-slate-900 text-white dark:text-gray-100 px-2 py-2 cursor-pointer hover:text-indigo-900"
+                  className="lg:text-base text-2xl font-mono lg:font-semibold font-extrabold lg:text-slate-900 text-white dark:text-gray-100 px-2 py-2 cursor-pointer hover:text-indigo-900 dark:hover:text-red-300"
                 >
                   Work
                 </h5>
@@ -214,7 +216,7 @@ function App() {
               <li>
                 <a
                   onClick={goToContact}
-                  className="lg:text-base text-2xl font-mono lg:font-semibold font-extrabold lg:text-slate-900 text-white dark:text-gray-100 px-2 py-2 cursor-pointer hover:text-indigo-900"
+                  className="lg:text-base text-2xl font-mono lg:font-semibold font-extrabold lg:text-slate-900 text-white dark:text-gray-100 px-2 py-2 cursor-pointer hover:text-indigo-900 dark:hover:text-red-300"
                 >
                   Contact
                 </a>
@@ -222,7 +224,7 @@ function App() {
               <li>
                 <a
                   href={Resume}
-                  className="lg:text-base text-2xl font-mono lg:font-semibold font-extrabold lg:text-indigo-800 text-white dark:text-gray-100 dark:border-gray-100  border-2 lg:border-indigo-700 border-white  lg:px-4 lg:py-2 px-10 py-4 block lg:mt-0 mt-5 lg:mb-0 mb-5 rounded-md"
+                  className="lg:text-base text-2xl font-mono lg:font-semibold font-extrabold lg:text-indigo-800 text-white dark:text-gray-100 dark:border-gray-100 hover:dark:border-red-300  border-2 lg:border-indigo-700 border-white  lg:px-4 lg:py-2 px-10 py-4 block lg:mt-0 mt-5 lg:mb-0 mb-5 rounded-md dark:hover:text-red-300"
                   download
                 >
                   Resume
@@ -304,7 +306,7 @@ function App() {
             ref={menuBtn}
           >
             <div
-              className="w-6 h-[2px] bg-[#f87171] rounded transition-all duration-500 before:absolute before:content-[''] before:w-8 before:h-[2px] before:bg-[#f87171] before:rounded before:-translate-y-2 before:transition-all before:duration-500 after:absolute after:content-[''] after:w-8 after:h-[2px] after:bg-[#f87171] after:rounded after:translate-y-2 after:transition-all after:duration-500 dark:bg-white dark:after:bg-white dark:before:bg-white"
+              className="w-6 h-[2px] bg-[#f87171] rounded  before:absolute before:content-[''] before:w-8 before:h-[2px] before:bg-[#f87171] before:rounded before:-translate-y-2 before:transition-all before:duration-500 after:absolute after:content-[''] after:w-8 after:h-[2px] after:bg-[#f87171] after:rounded after:translate-y-2 after:transition-all after:duration-500 dark:bg-white dark:after:bg-white dark:before:bg-white"
               ref={changeBg}
             ></div>
           </div>
@@ -312,7 +314,11 @@ function App() {
         <div className="hidden fixed top-0 lg:left-14 w-[4rem] h-screen lg:grid">
           <ul className="place-content-center flex flex-col space-y-12">
             <li>
-              <a href="https://github.com/noruwa03">
+              <a
+                href="https://github.com/noruwa03"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   role="img"
@@ -332,7 +338,11 @@ function App() {
               </a>
             </li>
             <li>
-              <a href="https://twitter.com/obasekinoruwa">
+              <a
+                href="https://twitter.com/obasekinoruwa"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   role="img"
@@ -352,7 +362,11 @@ function App() {
               </a>
             </li>
             <li>
-              <a href="https://linkedin.com/in/obaseki-noruwa-184a4020b">
+              <a
+                href="https://linkedin.com/in/obaseki-noruwa-184a4020b"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   role="img"
@@ -377,7 +391,7 @@ function App() {
         </div>
 
         <section id="" className="lg:pt-16 pt-24 pb-16 lg:px-48 sm:px-8 px-6">
-          <h1 className="lg:text-2xl text-lg font-mono font-semibold dark:font-medium dark:text-red-300 text-red-400 lg:mb-8 mb-2">
+          <h1 className="lg:text-2xl text-lg font-mono font-normal dark:font-medium dark:text-red-300 text-red-400 lg:mb-8 mb-2">
             Hi, my name is
           </h1>
           <h2 className="lg:text-7xl sm:text-5xl font-mono text-[2em] text-transparent bg-clip-text bg-gradient-to-r from-blue-900 to-purple-600 dark:text-[#ccd6f6] font-extrabold lg:my-2 my-0">
@@ -394,7 +408,9 @@ function App() {
           </p>
           <a
             href="mailto:noruwaobaseki@gmail.com"
-            className="font-mono font-bold text-slate-800 py-4 px-10 call-to-action"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-mono font-bold text-slate-800 py-4 px-10 shadow-[0px_7px_0px_0px_#94a3b8] rounded-xl bg-red-100 uppercase hover:shadow-[0px_4px_0px_0px_#94a3b8] dark:shadow-[0px_7px_0px_0px_#94a3b8] dark:hover:shadow-[0px_4px_0px_0px_#94a3b8] transition-all duration-150 dark:bg-indigo-50 dark:text-slate-700"
           >
             Hire me
           </a>
@@ -605,7 +621,9 @@ function App() {
           <div className="grid lg:grid-cols-8 sm:grid-cols-6 grid-col-4 gap-8">
             <div className="lg:col-span-4 sm:col-span-3 col-span-4">
               <a
-                href="/"
+                href="https://ecolabz.io"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="lg:text-2xl text-base font-mono text-slate-700 dark:text-gray-300 font-bold"
               >
                 Ecolabz
@@ -649,13 +667,15 @@ function App() {
           className="lg:py-24 py-20 lg:px-48 sm:px-8 px-6"
         >
           <h1 className="lg:text-3xl text-2xl font-mono font-bold text-indigo-800 dark:text-[#ccd6f6] mb-8">
-            Things I've Built
+            Work Development
           </h1>
           <div className="grid sm:grid-cols-8 grid-cols-4 gap-8 space-y-16">
             <div className="sm:col-span-4 col-span-4">
               <img src={Haraka} alt="Haraka" className="mb-4" />
               <a
                 href="https://haraka.shop"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="lg:text-2xl text-lg font-mono text-slate-800 dark:text-white font-bold underline decoration-wavy decoration-indigo-800 dark:decoration-white"
               >
                 Haraka shop
@@ -670,6 +690,8 @@ function App() {
               <img src={Ecolabz} alt="Ecolabz" className="mb-4" />
               <a
                 href="https://ecolabz.io"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="lg:text-2xl text-lg font-mono text-slate-800 dark:text-white font-bold underline decoration-wavy decoration-indigo-800 dark:decoration-white"
               >
                 Ecolabz
@@ -680,18 +702,78 @@ function App() {
                 companies.
               </p>
             </div>
+            {/* <div className="sm:col-span-4 col-span-4">
+              <img src={DripAda} alt="DripAda" className="mb-4" />
+              <a
+                href="https://dripada.netlify.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="lg:text-2xl text-lg font-mono text-slate-800 dark:text-white font-bold underline decoration-wavy decoration-indigo-800 dark:decoration-white"
+              >
+                DripAda
+              </a>
+              <p className="lg:text-base text-sm font-mono font-medium text-slate-800 dark:text-gray-400 mt-6">
+                Ecolabz is a startup venture studio that focuses on ideating,
+                creating, designing, developing and launching startups and
+                companies.
+              </p>
+            </div> */}
           </div>
         </section>
 
+        <section ref={work} className="lg:py-24 py-20 lg:px-48 sm:px-8 px-6">
+          <h1 className="lg:text-3xl text-2xl font-mono font-bold text-indigo-800 dark:text-[#ccd6f6] mb-8">
+            Things I've Built
+          </h1>
+          <div className="grid sm:grid-cols-8 grid-cols-4 gap-8 items-center">
+            <div className="sm:col-span-6 col-span-4">
+              <img src={NFTImage} alt="Haraka" />
+            </div>
+            <div className="sm:col-span-2 col-span-4">
+              <h2 className="lg:text-4xl text-2xl font-mono text-slate-800 dark:text-white font-bold">
+                NFT
+              </h2>
+              <p className="lg:text-base text-sm font-mono font-medium text-slate-800 dark:text-gray-400 mt-3">
+                NFT collectibles gallery studio.
+              </p>
+              <div className="mt-4">
+                <a
+                  href="https://nordev-nft.netlify.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    role="img"
+                    viewBox="0 0 24 24"
+                    width="26"
+                    height="26"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="feather feather-external-link stroke-slate-600 dark:stroke-white"
+                  >
+                    <title>External Link</title>
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
         <section className="lg:py-32 py-20 lg:px-48 sm:px-8 px-6">
           <h1 className="lg:text-3xl text-2xl font-mono text-center font-bold text-indigo-800 dark:text-[#ccd6f6] mb-8">
             Other activities
           </h1>
           <div className="grid lg:grid-cols-9 sm:grid-cols-6 grid-cols-4 gap-8">
-            <div className="lg:col-span-3 sm:col-span-3 col-span-4 bg-indigo-100 rounded-md shadow shadow-gray-200 hover:bg-indigo-200 cursor-default p-6">
+            <div className="lg:col-span-3 sm:col-span-3 col-span-4 bg-gray-50 dark:bg-indigo-50 rounded-md hover:dark:shadow-[4px_4px_0px_0px_#94a3b8] cursor-default p-6 shadow-[7px_7px_0px_0px_#e5e7eb] dark:shadow-[7px_7px_0px_0px_#94a3b8] transition-all duration-150">
               <div className=" space-y-4">
                 <a
-                  href="https://arbuzzer.netlify.app"
+                  href="https://dev.to/noruwa/animated-hamburger-menu-with-tailwindcss-1j0b"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -706,7 +788,7 @@ function App() {
                     strokeWidth="2"
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    className="feather feather-external-link stroke-indigo-700"
+                    className="feather feather-external-link stroke-slate-600 dark:stroke-slate-600"
                   >
                     <title>External Link</title>
                     <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
@@ -716,32 +798,18 @@ function App() {
                 </a>
 
                 <h3 className="font-bold text-lg font-mono text-slate-600">
-                  Arbuzzer
+                  Animated Hamburger Menu with Tailwindcss
                 </h3>
                 <p className="sm:text-base text-sm font-mono text-slate-800">
-                  A single web page application of a logistics and supply chain
-                  service provider.
+                  Tutorial on how to create hamburger menu with tailwindcss
                 </p>
-                <div className="flex flex-row flex-wrap space-x-4">
-                  <p className="lg:text-base text-sm font-semibold font-mono text-slate-800">
-                    Stack:
-                  </p>
-                  <p className="lg:text-base text-sm font-normal font-mono text-slate-800">
-                    HTML
-                  </p>
-                  <p className="lg:text-base text-sm font-normal font-mono text-slate-800">
-                    CSS
-                  </p>
-                  <p className="lg:text-base text-sm font-normal font-mono text-slate-800">
-                    JavaScript
-                  </p>
-                </div>
               </div>
             </div>
-            <div className="lg:col-span-3 sm:col-span-3 col-span-4 bg-indigo-100 rounded-md shadow shadow-gray-200 hover:bg-indigo-200 cursor-default p-6">
+
+            <div className="lg:col-span-3 sm:col-span-3 col-span-4 bg-gray-50 dark:bg-indigo-50 rounded-md hover:dark:shadow-[4px_4px_0px_0px_#94a3b8] cursor-default p-6 shadow-[7px_7px_0px_0px_#e5e7eb] dark:shadow-[7px_7px_0px_0px_#94a3b8] transition-all duration-150">
               <div className=" space-y-4">
                 <a
-                  href="https://devontrade.netlify.app"
+                  href="https://dev.to/noruwa/folder-structure-for-modern-web-applications-4d11"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -756,7 +824,7 @@ function App() {
                     strokeWidth="2"
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    className="feather feather-external-link stroke-indigo-700"
+                    className="feather feather-external-link stroke-slate-600 dark:stroke-slate-600"
                   >
                     <title>External Link</title>
                     <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
@@ -766,32 +834,19 @@ function App() {
                 </a>
 
                 <h3 className="font-bold text-lg font-mono text-slate-600">
-                  Devon trade
+                  Folder Structure for Modern Web Applications
                 </h3>
                 <p className="sm:text-base text-sm font-mono text-slate-800">
-                  Devon is a group of financial and cryptocurrency experts that
-                  invest in mining and cryptocurrency trading.
+                  A well-organized folder structure makes a developer appear
+                  professional.
                 </p>
-                <div className="flex flex-row flex-wrap space-x-4">
-                  <p className="lg:text-base text-sm font-semibold font-mono text-slate-800">
-                    Stack:
-                  </p>
-                  <p className="lg:text-base text-sm font-normal font-mono text-slate-800">
-                    HTML
-                  </p>
-                  <p className="lg:text-base text-sm font-normal font-mono text-slate-800">
-                    CSS
-                  </p>
-                  <p className="lg:text-base text-sm font-normal font-mono text-slate-800">
-                    JavaScript
-                  </p>
-                </div>
               </div>
             </div>
-            <div className="lg:col-span-3 sm:col-span-3 col-span-4 bg-indigo-100 rounded-md shadow shadow-gray-200 hover:bg-indigo-200 cursor-default p-6">
+
+            <div className="lg:col-span-3 sm:col-span-3 col-span-4 bg-gray-50 dark:bg-indigo-50 rounded-md hover:dark:shadow-[4px_4px_0px_0px_#94a3b8] cursor-default p-6 shadow-[7px_7px_0px_0px_#e5e7eb] dark:shadow-[7px_7px_0px_0px_#94a3b8] transition-all duration-150">
               <div className=" space-y-4">
                 <a
-                  href="https://saas-hospital.netlify.app"
+                  href="https://dev.to/noruwa/understanding-errors-in-javascript-error-objects-3db4"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -806,7 +861,7 @@ function App() {
                     strokeWidth="2"
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    className="feather feather-external-link stroke-indigo-700"
+                    className="feather feather-external-link stroke-slate-600 dark:stroke-slate-600"
                   >
                     <title>External Link</title>
                     <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
@@ -816,26 +871,11 @@ function App() {
                 </a>
 
                 <h3 className="font-bold text-lg font-mono text-slate-600">
-                  Hospital dashboard
+                  Understanding Errors In JavaScript: Error Objects
                 </h3>
                 <p className="sm:text-base text-sm font-mono text-slate-800">
-                  A multi page web ui for the management of patients, and
-                  services in an hospital.
+                  A basic tutorial on errors when executing JavaScript code.
                 </p>
-                <div className="flex flex-row flex-wrap space-x-4">
-                  <p className="lg:text-base text-sm font-semibold font-mono text-slate-800">
-                    Stack:
-                  </p>
-                  <p className="lg:text-base text-sm font-normal font-mono text-slate-800">
-                    HTML
-                  </p>
-                  <p className="lg:text-base text-sm font-normal font-mono text-slate-800">
-                    CSS
-                  </p>
-                  <p className="lg:text-base text-sm font-normal font-mono text-slate-800">
-                    JavaScript
-                  </p>
-                </div>
               </div>
             </div>
           </div>
@@ -860,7 +900,9 @@ function App() {
               <div className="flex flex-row justify-center">
                 <a
                   href="mailto:noruwaobaseki@gmail.com"
-                  className="font-mono font-bold text-slate-800 py-4 px-10 call-to-action"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-mono font-bold text-slate-800 py-4 px-10 shadow-[0px_7px_0px_0px_#94a3b8] rounded-xl bg-red-100 uppercase hover:shadow-[0px_4px_0px_0px_#94a3b8] dark:shadow-[0px_7px_0px_0px_#94a3b8] dark:hover:shadow-[0px_4px_0px_0px_#94a3b8] transition-all duration-150 dark:bg-indigo-50 dark:text-slate-700"
                 >
                   Say Hi
                 </a>
@@ -873,7 +915,11 @@ function App() {
           <div className="lg:hidden grid">
             <ul className="place-content-center flex flex-row space-x-10 my-8">
               <li>
-                <a href="https://github.com/noruwa03">
+                <a
+                  href="https://github.com/noruwa03"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     role="img"
@@ -893,7 +939,11 @@ function App() {
                 </a>
               </li>
               <li>
-                <a href="https://twitter.com/obasekinoruwa">
+                <a
+                  href="https://twitter.com/obasekinoruwa"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     role="img"
@@ -913,7 +963,11 @@ function App() {
                 </a>
               </li>
               <li>
-                <a href="https://linkedin.com/in/obaseki-noruwa-184a4020b">
+                <a
+                  href="https://linkedin.com/in/obaseki-noruwa-184a4020b"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     role="img"
@@ -937,9 +991,18 @@ function App() {
             </ul>
           </div>
           <div className="sm:grid">
-            <div className="sm:flex sm:flex-row sm:place-content-center font-mono text-sm text-slate-800 dark:text-gray-400 font-medium text-center">
-              Designed & Developed by
-              <span className="text-indigo-800 dark:text-[#ccd6f6] font-semibold ml-2">
+            <div className="sm:flex sm:flex-row sm:place-content-center font-mono text-sm text-slate-800 dark:text-gray-400 font-bold text-center">
+              Design inspiration by{" "}
+              <a
+                href="https://brittanychiang.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-indigo-800 dark:text-[#ccd6f6] font-bold ml-2"
+              >
+                Brittany Chiang
+              </a>{" "}
+              .Developed by
+              <span className="text-indigo-800 dark:text-[#ccd6f6] font-bold ml-2">
                 Obaseki Noruwa
               </span>
             </div>
