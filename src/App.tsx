@@ -3,7 +3,7 @@ import Resume from "./assets/resume.pdf";
 import MyImage from "./assets/images/Obaseki_Noruwa.jpg";
 import Haraka from "./assets/images/haraka.png";
 import Ecolabz from "./assets/images/ecolabz.png";
-import ShopperCart from "./assets/images/shoppercart.png";
+import ShopperCart from "./assets/images/ecommerce_app.png";
 import DraftBlog from "./assets/images/draft_blog.png"
 import DictionaryApp from "./assets/images/dictionary_app.png"
 import TodoApp from "./assets/images/todo_app.png";
