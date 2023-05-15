@@ -4,7 +4,7 @@ import MyImage from "./assets/images/Obaseki_Noruwa.jpg";
 import Haraka from "./assets/images/haraka.png";
 import Ecolabz from "./assets/images/ecolabz.png";
 // import DripAda from "./assets/images/dripada.png";
-import EcommerceApp from "./assets/images/shoppercart.png";
+import ShopperCart from "./assets/images/shoppercart.png";
 import DraftBlog from "./assets/images/draft_blog.png"
 import DictionaryApp from "./assets/images/dictionary_app.png"
 import TodoApp from "./assets/images/todo_app.png";
@@ -731,7 +731,7 @@ function App() {
           </h1>
           <div className="grid sm:grid-cols-8 grid-cols-4 gap-x-8 lg:gap-y-20 gap-y-8 items-center">
             <div className="sm:col-span-6 col-span-4">
-              <img src={EcommerceApp} alt="EcommerceApp" />
+              <img src={ShopperCart} alt="ShopperCart" />
             </div>
             <div className="sm:col-span-2 col-span-4">
               <h2 className="lg:text-4xl text-2xl  text-slate-800 dark:text-white font-bold">
