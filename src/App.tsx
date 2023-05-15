@@ -4,7 +4,7 @@ import MyImage from "./assets/images/Obaseki_Noruwa.jpg";
 import Haraka from "./assets/images/haraka.png";
 import Ecolabz from "./assets/images/ecolabz.png";
 // import DripAda from "./assets/images/dripada.png";
-import EcommerceApp from "./assets/images/shopperCart.png";
+import EcommerceApp from "./assets/images/shoppercart.png";
 import DraftBlog from "./assets/images/draft_blog.png"
 import DictionaryApp from "./assets/images/dictionary_app.png"
 import TodoApp from "./assets/images/todo_app.png";
