@@ -3,9 +3,9 @@ import Resume from "./assets/resume.pdf";
 import MyImage from "./assets/images/Obaseki_Noruwa.jpg";
 import Haraka from "./assets/images/haraka.png";
 import Ecolabz from "./assets/images/ecolabz.png";
-import ShopperCart from "./assets/images/ecommerce_app.png";
-import DraftBlog from "./assets/images/draft_blog.png"
-import DictionaryApp from "./assets/images/dictionary_app.png"
+// import ShopperCart from "./assets/images/ecommerce_app.png";
+import DraftBlog from "./assets/images/draft_blog.png";
+import DictionaryApp from "./assets/images/dictionary_app.png";
 import TodoApp from "./assets/images/todo_app.png";
 import NFTImage from "./assets/images/nft_site.png";
 import { useRef, useState, useEffect } from "react";
@@ -729,7 +729,7 @@ function App() {
             Things I've Built
           </h1>
           <div className="grid sm:grid-cols-8 grid-cols-4 gap-x-8 lg:gap-y-20 gap-y-8 items-center">
-            <div className="sm:col-span-6 col-span-4">
+            {/* <div className="sm:col-span-6 col-span-4">
               <img src={ShopperCart} alt="ShopperCart" />
             </div>
             <div className="sm:col-span-2 col-span-4">
@@ -766,7 +766,7 @@ function App() {
                   </svg>
                 </a>
               </div>
-            </div>
+            </div> */}
 
             <div className="sm:col-span-6 col-span-4">
               <img src={DraftBlog} alt="DraftBlog" />
